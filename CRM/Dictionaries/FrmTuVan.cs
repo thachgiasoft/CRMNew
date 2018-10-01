@@ -97,6 +97,7 @@ namespace CRM.Dictionaries
                                         ,[SoPhieuDat]
                                         ,[KhachHang]
                                         ,[NhanVien]
+                                        ,[NVCS]
                                         ,[NgayTao]
                                         ,[NoiDung]
                                         ,[NgayHen]

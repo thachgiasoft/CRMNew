@@ -54,6 +54,7 @@
             this.colLoai = new DevExpress.XtraGrid.Columns.GridColumn();
             this.repositoryItemLookUpEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
             this.loaiTuVanBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.colNVCS = new DevExpress.XtraGrid.Columns.GridColumn();
             this.rsearchNhanVien = new DevExpress.XtraEditors.Repository.RepositoryItemSearchLookUpEdit();
             this.repositoryItemSearchLookUpEdit1View = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colMaNV = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -279,7 +280,8 @@
             this.colNhanVien,
             this.colNoiDung,
             this.colSoPhieuDat,
-            this.colLoai});
+            this.colLoai,
+            this.colNVCS});
             this.customGridView1.FixedLineWidth = 1;
             this.customGridView1.FormatCode = null;
             this.customGridView1.GridControl = this.customGridControl1;
@@ -364,7 +366,7 @@
             this.colGhiChu.OptionsColumn.AllowEdit = false;
             this.colGhiChu.OptionsFilter.AutoFilterCondition = DevExpress.XtraGrid.Columns.AutoFilterCondition.Contains;
             this.colGhiChu.Visible = true;
-            this.colGhiChu.VisibleIndex = 6;
+            this.colGhiChu.VisibleIndex = 8;
             this.colGhiChu.Width = 116;
             // 
             // colHoanThanh
@@ -377,7 +379,7 @@
             this.colHoanThanh.OptionsFilter.AutoFilterCondition = DevExpress.XtraGrid.Columns.AutoFilterCondition.Contains;
             this.colHoanThanh.SortMode = DevExpress.XtraGrid.ColumnSortMode.Value;
             this.colHoanThanh.Visible = true;
-            this.colHoanThanh.VisibleIndex = 7;
+            this.colHoanThanh.VisibleIndex = 9;
             this.colHoanThanh.Width = 100;
             // 
             // rcboTrangThaiColumn
@@ -423,7 +425,7 @@
             this.colNgayHoanThanh.OptionsColumn.AllowEdit = false;
             this.colNgayHoanThanh.OptionsFilter.AutoFilterCondition = DevExpress.XtraGrid.Columns.AutoFilterCondition.Contains;
             this.colNgayHoanThanh.Visible = true;
-            this.colNgayHoanThanh.VisibleIndex = 8;
+            this.colNgayHoanThanh.VisibleIndex = 10;
             this.colNgayHoanThanh.Width = 101;
             // 
             // colNgayTao
@@ -447,7 +449,7 @@
             this.colNhanVien.OptionsColumn.AllowEdit = false;
             this.colNhanVien.OptionsFilter.AutoFilterCondition = DevExpress.XtraGrid.Columns.AutoFilterCondition.Contains;
             this.colNhanVien.Visible = true;
-            this.colNhanVien.VisibleIndex = 9;
+            this.colNhanVien.VisibleIndex = 6;
             this.colNhanVien.Width = 119;
             // 
             // colNoiDung
@@ -467,7 +469,7 @@
             this.colSoPhieuDat.OptionsColumn.AllowEdit = false;
             this.colSoPhieuDat.OptionsFilter.AutoFilterCondition = DevExpress.XtraGrid.Columns.AutoFilterCondition.Contains;
             this.colSoPhieuDat.Visible = true;
-            this.colSoPhieuDat.VisibleIndex = 10;
+            this.colSoPhieuDat.VisibleIndex = 11;
             this.colSoPhieuDat.Width = 160;
             // 
             // colLoai
@@ -495,6 +497,16 @@
             // 
             this.loaiTuVanBindingSource.DataMember = "LoaiTuVan";
             this.loaiTuVanBindingSource.DataSource = this.data;
+            // 
+            // colNVCS
+            // 
+            this.colNVCS.FieldName = "NVCS";
+            this.colNVCS.Name = "colNVCS";
+            this.colNVCS.OptionsColumn.AllowEdit = false;
+            this.colNVCS.OptionsFilter.AutoFilterCondition = DevExpress.XtraGrid.Columns.AutoFilterCondition.Contains;
+            this.colNVCS.Visible = true;
+            this.colNVCS.VisibleIndex = 7;
+            this.colNVCS.Width = 118;
             // 
             // rsearchNhanVien
             // 
@@ -774,5 +786,6 @@
         private DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit repositoryItemLookUpEdit1;
         private System.Windows.Forms.BindingSource loaiTuVanBindingSource;
         private CRMDataTableAdapters.LoaiTuVanTableAdapter loaiTuVanTableAdapter;
+        private DevExpress.XtraGrid.Columns.GridColumn colNVCS;
     }
 }

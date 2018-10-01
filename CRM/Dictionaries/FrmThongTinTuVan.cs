@@ -26,8 +26,8 @@ namespace CRM.Dictionaries
 
         private void FrmThongTinTuVan_Load(object sender, EventArgs e)
         {
-          
-         
+            // TODO: This line of code loads data into the 'data.NhomKH' table. You can move, or remove it, as needed.
+            this.nhomKHTableAdapter.Fill(this.data.NhomKH);
             UseEnableControl = false;
             LockControls(false);
 
@@ -53,6 +53,7 @@ namespace CRM.Dictionaries
                 t.NgayHen = Utils.TinhNgay(t.NgayTao, soNgay);
                 t.NgayHen = new DateTime(t.NgayHen.Year, t.NgayHen.Month, t.NgayHen.Day, 9, 0, 0);
                 t.NhanVien = HeThong.NguoiDungDangNhap.TenDangNhap;
+                t.NVCS = HeThong.NguoiDungDangNhap.TenDangNhap;
                 t.HinhThuc = (int)HinhThucLienLac.GoiDi;
                 t.Loai = "TVMH";
                 data.TuVan.AddTuVanRow(t);
@@ -80,6 +81,7 @@ namespace CRM.Dictionaries
             this.loaiTuVanTableAdapter.Fill(this.data.LoaiTuVan);
             this.khachHangTableAdapter.FillByUser(this.data.KhachHang, HeThong.NguoiDungDangNhap.TenDangNhap);
             this.nguoiDungTableAdapter.Fill(this.dataHeThong.NguoiDung);
+            this.tinhThanhTableAdapter.Fill(this.data.TinhThanh);
         }
 
         protected override bool OnSave()
@@ -177,7 +179,17 @@ namespace CRM.Dictionaries
                 txtTenKH.Text =
                 txtSoDT.Text =
                 txtEmail.Text =
+                txtSoCMT.Text =
+                txtLinkFB.Text =
+                txtNgheNghiep.Text =
+                txtKenhTT.Text =
+                txtMucDichSD.Text =
+                txtBenhLy.Text =
+                txtMoTa.Text =
+                dtNgaySinh.Text =
                 txtDiaChi.Text = string.Empty;
+                lkeNhomKH.EditValue = null;
+                lkeTinhThanh.EditValue = null;
                 customGridControl1.DataSource = null;
             }
             else
@@ -186,6 +198,18 @@ namespace CRM.Dictionaries
                 txtSoDT.Text = kh.SoDT;
                 txtEmail.Text = kh.Email;
                 txtDiaChi.Text = kh.DiaChi;
+                cbGioiTinh.EditValue = kh.GioiTinh;
+                txtSoCMT.Text = kh.SoCMT;
+                txtLinkFB.Text = kh.LinkFB;
+                txtNgheNghiep.Text = kh.NgheNghiep;
+                txtKenhTT.Text = kh.KenhTT;
+                txtMucDichSD.Text = kh.MucDichSuDung;
+                txtBenhLy.Text = kh.BenhLy;
+                txtMoTa.Text = kh.GhiChu;
+                lkeNhomKH.EditValue = kh.NhomKH;
+                if (!kh.IsNgaySinhNull()) dtNgaySinh.DateTime = kh.NgaySinh;
+                else dtNgaySinh.Text = string.Empty;
+                lkeTinhThanh.EditValue = kh.TinhThanh;
                 var dataHistory = new CRMData();
 
                 customGridControl1.DataSource = this.tuVanTableAdapter1.GetDataByKhachHang(kh.MaKH);
@@ -292,7 +316,7 @@ namespace CRM.Dictionaries
                         lookUpEdit1.EditValue = t2.Loai;
                         NgayTaoDateEdit.DateTime = t2.NgayTao;
                         NgayHenDateEdit.DateTime = t2.NgayHen;
-                        textEdit5.Text = t2.GhiChu;
+                        txtGhiChu.Text = t2.GhiChu;
                         NoiDungMemoEdit.Text = t2.NoiDung;
 
                         //if (LuuPhieu())

@@ -33,4 +33,13 @@ namespace CRM
         [Description("Gọi đến")]
         GoiDen = 1,        
     }
+
+
+    public enum EditMode
+    {
+        [Description("Thêm")]
+        Add = 0,
+        [Description("Sửa")]
+        Edit = 1,
+    }
 }

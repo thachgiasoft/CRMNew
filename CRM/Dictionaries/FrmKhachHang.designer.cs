@@ -55,6 +55,11 @@
             this.imageCollection1 = new DevExpress.Utils.ImageCollection(this.components);
             this.colNgaySinh = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colNVBH = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colMucDichSuDung = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colBenhLy = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colKenhTT = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colGhiChu = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colLinkFB = new DevExpress.XtraGrid.Columns.GridColumn();
             this.rsearchNhanVien = new DevExpress.XtraEditors.Repository.RepositoryItemSearchLookUpEdit();
             this.repositoryItemSearchLookUpEdit1View = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colMaNV = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -67,11 +72,6 @@
             this.khachHangTableAdapter = new CRM.CRMDataTableAdapters.KhachHangTableAdapter();
             this.nhomKHTableAdapter = new CRM.CRMDataTableAdapters.NhomKHTableAdapter();
             this.tinhThanhTableAdapter = new CRM.CRMDataTableAdapters.TinhThanhTableAdapter();
-            this.colMucDichSuDung = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colBenhLy = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colKenhTT = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colGhiChu = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colLinkFB = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this._dtNhatKy)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bm)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rgCalc)).BeginInit();
@@ -260,6 +260,7 @@
             this.colMaKH.FieldName = "MaKH";
             this.colMaKH.Fixed = DevExpress.XtraGrid.Columns.FixedStyle.Left;
             this.colMaKH.Name = "colMaKH";
+            this.colMaKH.OptionsColumn.AllowEdit = false;
             this.colMaKH.OptionsFilter.AutoFilterCondition = DevExpress.XtraGrid.Columns.AutoFilterCondition.Contains;
             this.colMaKH.Visible = true;
             this.colMaKH.VisibleIndex = 0;
@@ -270,6 +271,7 @@
             this.colTenKH.FieldName = "TenKH";
             this.colTenKH.Fixed = DevExpress.XtraGrid.Columns.FixedStyle.Left;
             this.colTenKH.Name = "colTenKH";
+            this.colTenKH.OptionsColumn.AllowEdit = false;
             this.colTenKH.OptionsFilter.AutoFilterCondition = DevExpress.XtraGrid.Columns.AutoFilterCondition.Contains;
             this.colTenKH.Visible = true;
             this.colTenKH.VisibleIndex = 1;
@@ -279,6 +281,7 @@
             // 
             this.colEmail.FieldName = "Email";
             this.colEmail.Name = "colEmail";
+            this.colEmail.OptionsColumn.AllowEdit = false;
             this.colEmail.OptionsFilter.AutoFilterCondition = DevExpress.XtraGrid.Columns.AutoFilterCondition.Contains;
             this.colEmail.Visible = true;
             this.colEmail.VisibleIndex = 5;
@@ -288,6 +291,7 @@
             // 
             this.colDiaChi.FieldName = "DiaChi";
             this.colDiaChi.Name = "colDiaChi";
+            this.colDiaChi.OptionsColumn.AllowEdit = false;
             this.colDiaChi.OptionsFilter.AutoFilterCondition = DevExpress.XtraGrid.Columns.AutoFilterCondition.Contains;
             this.colDiaChi.Visible = true;
             this.colDiaChi.VisibleIndex = 3;
@@ -298,6 +302,7 @@
             this.colTinhThanh.ColumnEdit = this.replkeTinhThanh;
             this.colTinhThanh.FieldName = "TinhThanh";
             this.colTinhThanh.Name = "colTinhThanh";
+            this.colTinhThanh.OptionsColumn.AllowEdit = false;
             this.colTinhThanh.OptionsFilter.AutoFilterCondition = DevExpress.XtraGrid.Columns.AutoFilterCondition.Contains;
             this.colTinhThanh.Visible = true;
             this.colTinhThanh.VisibleIndex = 6;
@@ -322,6 +327,7 @@
             // 
             this.colSoDT.FieldName = "SoDT";
             this.colSoDT.Name = "colSoDT";
+            this.colSoDT.OptionsColumn.AllowEdit = false;
             this.colSoDT.OptionsFilter.AutoFilterCondition = DevExpress.XtraGrid.Columns.AutoFilterCondition.Contains;
             this.colSoDT.Visible = true;
             this.colSoDT.VisibleIndex = 4;
@@ -335,6 +341,7 @@
             this.colCreatedDate.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
             this.colCreatedDate.FieldName = "CreatedDate";
             this.colCreatedDate.Name = "colCreatedDate";
+            this.colCreatedDate.OptionsColumn.AllowEdit = false;
             this.colCreatedDate.OptionsFilter.AutoFilterCondition = DevExpress.XtraGrid.Columns.AutoFilterCondition.Contains;
             this.colCreatedDate.Visible = true;
             this.colCreatedDate.VisibleIndex = 16;
@@ -345,6 +352,7 @@
             this.colNhomKH.ColumnEdit = this.replkeNhomKH;
             this.colNhomKH.FieldName = "NhomKH";
             this.colNhomKH.Name = "colNhomKH";
+            this.colNhomKH.OptionsColumn.AllowEdit = false;
             this.colNhomKH.OptionsFilter.AutoFilterCondition = DevExpress.XtraGrid.Columns.AutoFilterCondition.Contains;
             this.colNhomKH.Visible = true;
             this.colNhomKH.VisibleIndex = 8;
@@ -369,6 +377,7 @@
             // 
             this.colSoCMT.FieldName = "SoCMT";
             this.colSoCMT.Name = "colSoCMT";
+            this.colSoCMT.OptionsColumn.AllowEdit = false;
             this.colSoCMT.OptionsFilter.AutoFilterCondition = DevExpress.XtraGrid.Columns.AutoFilterCondition.Contains;
             this.colSoCMT.Visible = true;
             this.colSoCMT.VisibleIndex = 9;
@@ -378,6 +387,7 @@
             // 
             this.colAnh.FieldName = "Anh";
             this.colAnh.Name = "colAnh";
+            this.colAnh.OptionsColumn.AllowEdit = false;
             this.colAnh.OptionsFilter.AutoFilterCondition = DevExpress.XtraGrid.Columns.AutoFilterCondition.Contains;
             this.colAnh.Visible = true;
             this.colAnh.VisibleIndex = 15;
@@ -386,6 +396,7 @@
             // 
             this.colNgheNghiep.FieldName = "NgheNghiep";
             this.colNgheNghiep.Name = "colNgheNghiep";
+            this.colNgheNghiep.OptionsColumn.AllowEdit = false;
             this.colNgheNghiep.OptionsFilter.AutoFilterCondition = DevExpress.XtraGrid.Columns.AutoFilterCondition.Contains;
             this.colNgheNghiep.Visible = true;
             this.colNgheNghiep.VisibleIndex = 12;
@@ -395,6 +406,7 @@
             this.colGioiTinh.ColumnEdit = this.repcboGioiTinh;
             this.colGioiTinh.FieldName = "GioiTinh";
             this.colGioiTinh.Name = "colGioiTinh";
+            this.colGioiTinh.OptionsColumn.AllowEdit = false;
             this.colGioiTinh.OptionsFilter.AutoFilterCondition = DevExpress.XtraGrid.Columns.AutoFilterCondition.Contains;
             this.colGioiTinh.Visible = true;
             this.colGioiTinh.VisibleIndex = 7;
@@ -424,6 +436,7 @@
             this.colNgaySinh.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.colNgaySinh.FieldName = "NgaySinh";
             this.colNgaySinh.Name = "colNgaySinh";
+            this.colNgaySinh.OptionsColumn.AllowEdit = false;
             this.colNgaySinh.OptionsFilter.AutoFilterCondition = DevExpress.XtraGrid.Columns.AutoFilterCondition.Contains;
             this.colNgaySinh.Visible = true;
             this.colNgaySinh.VisibleIndex = 2;
@@ -433,10 +446,61 @@
             // 
             this.colNVBH.FieldName = "NVBH";
             this.colNVBH.Name = "colNVBH";
+            this.colNVBH.OptionsColumn.AllowEdit = false;
             this.colNVBH.OptionsFilter.AutoFilterCondition = DevExpress.XtraGrid.Columns.AutoFilterCondition.Contains;
             this.colNVBH.Visible = true;
             this.colNVBH.VisibleIndex = 17;
             this.colNVBH.Width = 108;
+            // 
+            // colMucDichSuDung
+            // 
+            this.colMucDichSuDung.FieldName = "MucDichSuDung";
+            this.colMucDichSuDung.Name = "colMucDichSuDung";
+            this.colMucDichSuDung.OptionsColumn.AllowEdit = false;
+            this.colMucDichSuDung.OptionsFilter.AutoFilterCondition = DevExpress.XtraGrid.Columns.AutoFilterCondition.Contains;
+            this.colMucDichSuDung.Visible = true;
+            this.colMucDichSuDung.VisibleIndex = 10;
+            this.colMucDichSuDung.Width = 105;
+            // 
+            // colBenhLy
+            // 
+            this.colBenhLy.FieldName = "BenhLy";
+            this.colBenhLy.Name = "colBenhLy";
+            this.colBenhLy.OptionsColumn.AllowEdit = false;
+            this.colBenhLy.OptionsFilter.AutoFilterCondition = DevExpress.XtraGrid.Columns.AutoFilterCondition.Contains;
+            this.colBenhLy.Visible = true;
+            this.colBenhLy.VisibleIndex = 13;
+            this.colBenhLy.Width = 102;
+            // 
+            // colKenhTT
+            // 
+            this.colKenhTT.FieldName = "KenhTT";
+            this.colKenhTT.Name = "colKenhTT";
+            this.colKenhTT.OptionsColumn.AllowEdit = false;
+            this.colKenhTT.OptionsFilter.AutoFilterCondition = DevExpress.XtraGrid.Columns.AutoFilterCondition.Contains;
+            this.colKenhTT.Visible = true;
+            this.colKenhTT.VisibleIndex = 11;
+            this.colKenhTT.Width = 99;
+            // 
+            // colGhiChu
+            // 
+            this.colGhiChu.FieldName = "GhiChu";
+            this.colGhiChu.Name = "colGhiChu";
+            this.colGhiChu.OptionsColumn.AllowEdit = false;
+            this.colGhiChu.OptionsFilter.AutoFilterCondition = DevExpress.XtraGrid.Columns.AutoFilterCondition.Contains;
+            this.colGhiChu.Visible = true;
+            this.colGhiChu.VisibleIndex = 18;
+            this.colGhiChu.Width = 90;
+            // 
+            // colLinkFB
+            // 
+            this.colLinkFB.FieldName = "LinkFB";
+            this.colLinkFB.Name = "colLinkFB";
+            this.colLinkFB.OptionsColumn.AllowEdit = false;
+            this.colLinkFB.OptionsFilter.AutoFilterCondition = DevExpress.XtraGrid.Columns.AutoFilterCondition.Contains;
+            this.colLinkFB.Visible = true;
+            this.colLinkFB.VisibleIndex = 14;
+            this.colLinkFB.Width = 99;
             // 
             // rsearchNhanVien
             // 
@@ -533,51 +597,6 @@
             // tinhThanhTableAdapter
             // 
             this.tinhThanhTableAdapter.ClearBeforeFill = true;
-            // 
-            // colMucDichSuDung
-            // 
-            this.colMucDichSuDung.FieldName = "MucDichSuDung";
-            this.colMucDichSuDung.Name = "colMucDichSuDung";
-            this.colMucDichSuDung.OptionsFilter.AutoFilterCondition = DevExpress.XtraGrid.Columns.AutoFilterCondition.Contains;
-            this.colMucDichSuDung.Visible = true;
-            this.colMucDichSuDung.VisibleIndex = 10;
-            this.colMucDichSuDung.Width = 105;
-            // 
-            // colBenhLy
-            // 
-            this.colBenhLy.FieldName = "BenhLy";
-            this.colBenhLy.Name = "colBenhLy";
-            this.colBenhLy.OptionsFilter.AutoFilterCondition = DevExpress.XtraGrid.Columns.AutoFilterCondition.Contains;
-            this.colBenhLy.Visible = true;
-            this.colBenhLy.VisibleIndex = 13;
-            this.colBenhLy.Width = 102;
-            // 
-            // colKenhTT
-            // 
-            this.colKenhTT.FieldName = "KenhTT";
-            this.colKenhTT.Name = "colKenhTT";
-            this.colKenhTT.OptionsFilter.AutoFilterCondition = DevExpress.XtraGrid.Columns.AutoFilterCondition.Contains;
-            this.colKenhTT.Visible = true;
-            this.colKenhTT.VisibleIndex = 11;
-            this.colKenhTT.Width = 99;
-            // 
-            // colGhiChu
-            // 
-            this.colGhiChu.FieldName = "GhiChu";
-            this.colGhiChu.Name = "colGhiChu";
-            this.colGhiChu.OptionsFilter.AutoFilterCondition = DevExpress.XtraGrid.Columns.AutoFilterCondition.Contains;
-            this.colGhiChu.Visible = true;
-            this.colGhiChu.VisibleIndex = 18;
-            this.colGhiChu.Width = 90;
-            // 
-            // colLinkFB
-            // 
-            this.colLinkFB.FieldName = "LinkFB";
-            this.colLinkFB.Name = "colLinkFB";
-            this.colLinkFB.OptionsFilter.AutoFilterCondition = DevExpress.XtraGrid.Columns.AutoFilterCondition.Contains;
-            this.colLinkFB.Visible = true;
-            this.colLinkFB.VisibleIndex = 14;
-            this.colLinkFB.Width = 99;
             // 
             // FrmKhachHang
             // 

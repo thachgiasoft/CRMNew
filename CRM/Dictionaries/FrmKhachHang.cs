@@ -31,6 +31,7 @@ namespace CRM.Dictionaries
             if (k == null) return;
 
             var f = new FrmThongTinKH(k.MaKH);
+            f.ChucNang = ChucNang;
             if (f.ShowDialog() == System.Windows.Forms.DialogResult.OK)
                 OnReload();
 

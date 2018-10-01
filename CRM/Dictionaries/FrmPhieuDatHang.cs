@@ -34,6 +34,8 @@ namespace CRM.Dictionaries
         protected override void OnNew()
         {
             var f = new FrmThongTinPhieuDH();
+            f.ChucNang = ChucNang;
+            f.EditMode = EditMode.Add;
             if (f.ShowDialog() == System.Windows.Forms.DialogResult.OK)
                 OnReload();
 
@@ -46,6 +48,8 @@ namespace CRM.Dictionaries
             if (p == null) return;
 
             var f = new FrmThongTinPhieuDH(p.SoPhieu);
+            f.ChucNang = ChucNang;
+            f.EditMode = EditMode.Edit;
             if (f.ShowDialog() == System.Windows.Forms.DialogResult.OK)
                 OnReload();
 

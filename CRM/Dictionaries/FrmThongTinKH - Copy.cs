@@ -359,15 +359,5 @@ namespace CRM.Dictionaries
             MsgBox.ShowSuccessfulDialog(string.Format("Lịch hẹn tư vấn cho KH tiềm năng {0} vào [{1:dd/MM/yyyy HH:mm}] được tạo thành công", TenKHTextEdit.Text, t2.NgayHen));
 
         }
-
-        //double click lên tư vấn treo
-        private void customGridView4_DoubleClick(object sender, EventArgs e)
-        {
-            var tv = customGridView4.GetFocusedDataRow() as CRMData.TuVanRow;
-            if (tv == null) return;
-            if (tv.TrangThai != (int)TrangThaiTuVan.Pending) return;
-            FrmThongTinTuVan f = new FrmThongTinTuVan(tv.ID);
-            f.ShowDialog();
-        }
     }
 }

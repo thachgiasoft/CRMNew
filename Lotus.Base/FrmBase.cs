@@ -105,6 +105,9 @@ namespace Lotus.Base
 
         protected virtual bool OnCancelClosing()
         {
+            if (!_quyen.Sua) return false;
+
+
             var bs = FindBindingSource();
             if (bs != null)
             {
@@ -118,6 +121,7 @@ namespace Lotus.Base
                 }
             }
 
+            
             if (AllowClose)
             {
                 if (IsDataChange())
@@ -606,14 +610,16 @@ namespace Lotus.Base
             LockControls(true);
         }
 
-        DATA.PhanQuyenRow _quyen;
-
+        protected DATA.PhanQuyenRow _quyen;
+        protected bool CheckOnActive = true;
         private void FrmBase_Activated(object sender, EventArgs e)
         {
             if (string.IsNullOrEmpty(HeThong.TenDangNhap)) return;
             if (string.IsNullOrEmpty(ChucNang)) return;
 
             //if (this.MdiParent == null) return; // tam thoi cheat
+
+            if (CheckOnActive == false) return;
 
             var p = HeThong.LayPhanQuyen(ChucNang, HeThong.TenDangNhap, false);
             if (p == null) return;
@@ -646,7 +652,14 @@ namespace Lotus.Base
 
         }
 
+        protected override void OnShown(EventArgs e)
+        {
+            base.OnShown(e);
 
+            if (_quyen == null) return;
+            bool locked = !(_quyen.Sua | _quyen.Them);
+            LockControls(locked);            
+        }
 
         protected void ReloadButtons()
         {

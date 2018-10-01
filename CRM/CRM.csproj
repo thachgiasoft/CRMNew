@@ -129,7 +129,7 @@
       <DependentUpon>CRMData.xsd</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="CRMData.Designer.cs">
+    <Compile Include="CRMData1.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>CRMData.xsd</DependentUpon>
@@ -441,8 +441,8 @@
     </None>
     <None Include="CRMData.xsd">
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>CRMData.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>CRMData1.Designer.cs</LastGenOutput>
     </None>
     <None Include="CRMData.xss">
       <DependentUpon>CRMData.xsd</DependentUpon>

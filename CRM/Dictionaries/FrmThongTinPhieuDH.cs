@@ -17,6 +17,8 @@ namespace CRM.Dictionaries
     public partial class FrmThongTinPhieuDH : FrmBase
     {
         string _soPhieu = string.Empty;
+
+        public EditMode EditMode { get; set; }
         public FrmThongTinPhieuDH()
         {
             InitializeComponent();
@@ -94,37 +96,63 @@ namespace CRM.Dictionaries
             //tuVanTableAdapter.FillBySoPhieu(data.TuVan, _soPhieu);
             //customGridControl3.DataSource = data.TuVan;
 
-            int loai = HeThong.NguoiDungDangNhap.Loai;
-            int n = Param.GetValue<int>("Số ngày quản lý được phép sửa dữ liệu", "Hệ thống", 7);
-            if (loai == (int)Lotus.Libraries.ChucDanh.QuanLy)
+           
+        }
+
+
+
+        protected override void OnShown(EventArgs e)
+        {
+            base.OnShown(e);
+            if (EditMode == CRM.EditMode.Edit)
             {
-                if (DateTime.Today.AddDays(-n) > NgayPhieuDateEdit.DateTime.Date)
-                    LockControls(true);
-            }
-            else
-            {
-                n = Param.GetValue<int>("Số ngày được phép sửa dữ liệu", "Hệ thống", 2);
-                if (DateTime.Today.AddDays(-n) > NgayPhieuDateEdit.DateTime.Date && loai < 3)
+                int loai = HeThong.NguoiDungDangNhap.Loai;
+                int n = Param.GetValue<int>("Số ngày quản lý được phép sửa dữ liệu", "Hệ thống", 7);
+                if (loai == (int)Lotus.Libraries.ChucDanh.QuanLy)
                 {
-                    LockControls(true);
-                    btnHuy.Enabled = false; 
+                    if (DateTime.Today.AddDays(-n) > NgayPhieuDateEdit.DateTime.Date)
+                        LockControls(true);
                 }
+                else
+                {
+                    n = Param.GetValue<int>("Số ngày được phép sửa dữ liệu", "Hệ thống", 2);
+                    if (DateTime.Today.AddDays(-n) > NgayPhieuDateEdit.DateTime.Date && loai < 3)
+                    {
+                        LockControls(true);
+                        btnHuy.Enabled = false;
+                        btnSave.Enabled = false;
+                    }
+                }
+
+                var p = data.PhieuDatHang.FirstOrDefault();
+                if (p == null) return;
+                if (p.TrangThai != (int)TrangThaiPhieuDat.Pending)
+                {
+                    if (loai < 3)
+                    {
+                        LockControls(true);
+                        btnHuy.Enabled = false;
+                        btnSave.Enabled = false;
+                    }
+                }
+                btnHuy.Enabled = p.TrangThai == (int)TrangThaiPhieuDat.Pending;
             }
 
-            var p = data.PhieuDatHang.FirstOrDefault();
-            if (p == null) return;
-            if(p.TrangThai != (int)TrangThaiPhieuDat.Pending)
+            if (_quyen.Sua == false)
             {
-                if (loai < 3)
-                {
-                    LockControls(true);
-                    btnHuy.Enabled = false; 
-                }
-            }
-            btnHuy.Enabled = p.TrangThai == (int)TrangThaiPhieuDat.Pending;
+                LockControls(true);
+                btnHuy.Enabled = false;
+                btnSave.Enabled = false;
 
-            if(_isRead)
+            }
+
+            if (_isRead)
                 btnHuy.Enabled = false; 
+
+            // xu ly cho nay ..
+            //...
+
+            CheckOnActive = false;
         }
 
         protected override void OnReload()
