@@ -107,6 +107,10 @@
     <Reference Include="DevExpress.XtraTreeList.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <Private>True</Private>
     </Reference>
+    <Reference Include="Lotus.License, Version=1.0.0.1, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Source\Lotus.License\Release\Lotus.License.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
@@ -468,10 +472,6 @@
     <ProjectReference Include="..\Lotus.Base\Lotus.Base.csproj">
       <Project>{78bc7176-0210-4c37-b92c-29bed97294b7}</Project>
       <Name>Lotus.Base</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Lotus.License\Lotus.License\Lotus.License.csproj">
-      <Project>{7a41b002-f892-4a5d-b373-de21a452fee4}</Project>
-      <Name>Lotus.License</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
