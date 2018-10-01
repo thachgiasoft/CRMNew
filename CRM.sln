@@ -1,0 +1,52 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lotus.Base", "Lotus.Base\Lotus.Base.csproj", "{78BC7176-0210-4C37-B92C-29BED97294B7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CRM", "CRM\CRM.csproj", "{90FAD688-45D1-4743-A17B-8161E8DC3DF4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CRM.ConvertDatabase", "CRM.ConvertDatabase\CRM.ConvertDatabase.csproj", "{27DDFC71-1F96-46C8-B702-3E91CE3AC114}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CRM.AutoUpdate", "CRM.AutoUpdate\CRM.AutoUpdate.csproj", "{EDC3402C-D745-4F8A-9D98-A7B26BFC9263}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lotus.License", "Lotus.License\Lotus.License\Lotus.License.csproj", "{7A41B002-F892-4A5D-B373-DE21A452FEE4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lotus.KeyGen", "Lotus.KeyGen\Lotus.KeyGen.csproj", "{DA6D8FE1-829A-4291-89CF-251192A07281}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{78BC7176-0210-4C37-B92C-29BED97294B7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{78BC7176-0210-4C37-B92C-29BED97294B7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{78BC7176-0210-4C37-B92C-29BED97294B7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{78BC7176-0210-4C37-B92C-29BED97294B7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{90FAD688-45D1-4743-A17B-8161E8DC3DF4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{90FAD688-45D1-4743-A17B-8161E8DC3DF4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{90FAD688-45D1-4743-A17B-8161E8DC3DF4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{90FAD688-45D1-4743-A17B-8161E8DC3DF4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{27DDFC71-1F96-46C8-B702-3E91CE3AC114}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{27DDFC71-1F96-46C8-B702-3E91CE3AC114}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{27DDFC71-1F96-46C8-B702-3E91CE3AC114}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{27DDFC71-1F96-46C8-B702-3E91CE3AC114}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EDC3402C-D745-4F8A-9D98-A7B26BFC9263}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EDC3402C-D745-4F8A-9D98-A7B26BFC9263}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EDC3402C-D745-4F8A-9D98-A7B26BFC9263}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EDC3402C-D745-4F8A-9D98-A7B26BFC9263}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7A41B002-F892-4A5D-B373-DE21A452FEE4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7A41B002-F892-4A5D-B373-DE21A452FEE4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7A41B002-F892-4A5D-B373-DE21A452FEE4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7A41B002-F892-4A5D-B373-DE21A452FEE4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DA6D8FE1-829A-4291-89CF-251192A07281}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DA6D8FE1-829A-4291-89CF-251192A07281}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DA6D8FE1-829A-4291-89CF-251192A07281}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DA6D8FE1-829A-4291-89CF-251192A07281}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
