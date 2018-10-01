@@ -181,7 +181,6 @@
             this.btnInPhieuXuatKho = new DevExpress.XtraBars.BarButtonItem();
             this.btnPhieuXuatBH = new DevExpress.XtraBars.BarButtonItem();
             this.btnHuy = new DevExpress.XtraBars.BarLargeButtonItem();
-            this.lichSuGiaoDichTableAdapter = new CRM.DataReportTableAdapters.LichSuGiaoDichTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this._dtNhatKy)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bm)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rgCalc)).BeginInit();
@@ -2139,10 +2138,6 @@
             this.btnHuy.Name = "btnHuy";
             this.btnHuy.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnHuy_ItemClick);
             // 
-            // lichSuGiaoDichTableAdapter
-            // 
-            this.lichSuGiaoDichTableAdapter.ClearBeforeFill = true;
-            // 
             // FrmThongTinPhieuDH
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -2407,7 +2402,7 @@
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem7;
         private DevExpress.XtraEditors.Repository.RepositoryItemImageComboBox repLoaiPhieu;
         private DevExpress.Utils.ImageCollection imageCollection2;
-        private DataReportTableAdapters.LichSuGiaoDichTableAdapter lichSuGiaoDichTableAdapter;
+        
         private DevExpress.Utils.ImageCollection imageCollection3;
         private DevExpress.XtraBars.BarButtonItem btnPhieuXuatBH;
     }

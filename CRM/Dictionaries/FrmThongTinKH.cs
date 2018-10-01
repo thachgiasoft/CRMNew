@@ -88,8 +88,9 @@ namespace CRM.Dictionaries
             }
 
             //goi day
-            customGridControl1.DataSource = lichSuGiaoDichTableAdapter.GetData(_maKH);
+            customGridControl1.DataSource = lichSuMuaHangTableAdapter.GetData(_maKH);
             customGridControl4.DataSource = tuVanTableAdapter1.GetDataByKhachHang(_maKH);
+            customGridControl2.DataSource = lichSuTraHangTableAdapter.GetData(_maKH);
 
             var kh = data.KhachHang.FirstOrDefault();
             if (kh == null) return;
@@ -367,6 +368,26 @@ namespace CRM.Dictionaries
             if (tv == null) return;
             if (tv.TrangThai != (int)TrangThaiTuVan.Pending) return;
             FrmThongTinTuVan f = new FrmThongTinTuVan(tv.ID);
+            f.ShowDialog();
+        }
+
+        private void btnAddTV_Click(object sender, EventArgs e)
+        {
+            FrmThongTinTuVan f = new FrmThongTinTuVan(string.Empty);
+            var k = data.KhachHang.FirstOrDefault();
+            if (k == null) return;
+            f.SetKhachHang(k.MaKH);
+            f.ShowDialog();
+        }
+
+        private void btnMuaHang_Click(object sender, EventArgs e)
+        {
+           
+            var k = data.KhachHang.FirstOrDefault();
+            if (k == null) return;
+            FrmThongTinPhieuDH f = new FrmThongTinPhieuDH(string.Empty, k.MaKH);
+        
+            f.ChucNang = "btnPhieuDatHang";
             f.ShowDialog();
         }
     }
