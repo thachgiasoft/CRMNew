@@ -34,12 +34,9 @@
             this.imageCollection2 = new DevExpress.Utils.ImageCollection(this.components);
             this.dataLayoutControl1 = new DevExpress.XtraDataLayout.DataLayoutControl();
             this.lkeNVCS = new DevExpress.XtraEditors.LookUpEdit();
-            this.tuVanBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.data = new CRM.CRMData();
-            this.nguoidungBS = new System.Windows.Forms.BindingSource(this.components);
-            this.dataHeThong = new Lotus.Base.DATA();
             this.lkeTinhThanh = new DevExpress.XtraEditors.LookUpEdit();
             this.tinhThanhBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.data = new CRM.CRMData();
             this.txtMoTa = new DevExpress.XtraEditors.TextEdit();
             this.dtNgaySinh = new DevExpress.XtraEditors.DateEdit();
             this.txtLinkFB = new DevExpress.XtraEditors.TextEdit();
@@ -53,10 +50,13 @@
             this.txtNgheNghiep = new DevExpress.XtraEditors.TextEdit();
             this.txtKenhTT = new DevExpress.XtraEditors.TextEdit();
             this.lookUpEdit1 = new DevExpress.XtraEditors.LookUpEdit();
+            this.tuVanBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.loaiTuVanBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.cboHinhThuc = new DevExpress.XtraEditors.ImageComboBoxEdit();
             this.imageCollection1 = new DevExpress.Utils.ImageCollection(this.components);
             this.customGridControl2 = new Lotus.Libraries.CustomGridControl();
+            this.lichSuGiaoDichBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dataReport = new CRM.DataReport();
             this.customGridView2 = new Lotus.Libraries.CustomGridView();
             this.colLoai = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colNgayPhieu = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -76,6 +76,8 @@
             this.customGridView1 = new Lotus.Libraries.CustomGridView();
             this.colNhanVien = new DevExpress.XtraGrid.Columns.GridColumn();
             this.repositoryItemLookUpEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
+            this.nguoidungBS = new System.Windows.Forms.BindingSource(this.components);
+            this.dataHeThong = new Lotus.Base.DATA();
             this.colNgayTao = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colNoiDung = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colNgayHen = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -139,7 +141,6 @@
             this.layoutControlItem6 = new DevExpress.XtraLayout.LayoutControlItem();
             this.u = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem7 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.dataReport = new CRM.DataReport();
             this.tuVanTableAdapter = new CRM.CRMDataTableAdapters.TuVanTableAdapter();
             this.khachHangTableAdapter = new CRM.CRMDataTableAdapters.KhachHangTableAdapter();
             this.btnOK = new DevExpress.XtraBars.BarLargeButtonItem();
@@ -147,6 +148,7 @@
             this.tuVanTableAdapter1 = new CRM.CRMDataTableAdapters.TuVanTableAdapter();
             this.btnXemDonHang = new DevExpress.XtraBars.BarButtonItem();
             this.phieuDatHangTableAdapter1 = new CRM.CRMDataTableAdapters.PhieuDatHangTableAdapter();
+            this.lichSuGiaoDichTableAdapter = new CRM.DataReportTableAdapters.LichSuGiaoDichTableAdapter();
             this.loaiTuVanTableAdapter = new CRM.CRMDataTableAdapters.LoaiTuVanTableAdapter();
             this.tinhThanhTableAdapter = new CRM.CRMDataTableAdapters.TinhThanhTableAdapter();
             this.nhomKHTableAdapter = new CRM.CRMDataTableAdapters.NhomKHTableAdapter();
@@ -161,12 +163,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataLayoutControl1)).BeginInit();
             this.dataLayoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.lkeNVCS.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tuVanBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.data)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nguoidungBS)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataHeThong)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lkeTinhThanh.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tinhThanhBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.data)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtMoTa.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtNgaySinh.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtNgaySinh.Properties)).BeginInit();
@@ -181,16 +180,21 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtNgheNghiep.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtKenhTT.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lookUpEdit1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tuVanBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.loaiTuVanBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cboHinhThuc.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imageCollection1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.customGridControl2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lichSuGiaoDichBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataReport)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.customGridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemSpinEdit1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.customGridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tuVanBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.customGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEdit1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nguoidungBS)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataHeThong)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repTrangThai)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imageCollection3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repHinhThuc)).BeginInit();
@@ -243,7 +247,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.u)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataReport)).BeginInit();
             this.SuspendLayout();
             // 
             // bm
@@ -404,26 +407,6 @@
             this.lkeNVCS.StyleController = this.dataLayoutControl1;
             this.lkeNVCS.TabIndex = 29;
             // 
-            // tuVanBindingSource
-            // 
-            this.tuVanBindingSource.DataMember = "TuVan";
-            this.tuVanBindingSource.DataSource = this.data;
-            // 
-            // data
-            // 
-            this.data.DataSetName = "CRMData";
-            this.data.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // nguoidungBS
-            // 
-            this.nguoidungBS.DataMember = "NguoiDung";
-            this.nguoidungBS.DataSource = this.dataHeThong;
-            // 
-            // dataHeThong
-            // 
-            this.dataHeThong.DataSetName = "DATA";
-            this.dataHeThong.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // lkeTinhThanh
             // 
             this.lkeTinhThanh.Enabled = false;
@@ -444,9 +427,13 @@
             this.tinhThanhBindingSource.DataMember = "TinhThanh";
             this.tinhThanhBindingSource.DataSource = this.data;
             // 
+            // data
+            // 
+            this.data.DataSetName = "CRMData";
+            this.data.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // txtMoTa
             // 
-            this.txtMoTa.Enabled = false;
             this.txtMoTa.Location = new System.Drawing.Point(110, 253);
             this.txtMoTa.MenuManager = this.bm;
             this.txtMoTa.Name = "txtMoTa";
@@ -592,6 +579,11 @@
             this.lookUpEdit1.StyleController = this.dataLayoutControl1;
             this.lookUpEdit1.TabIndex = 17;
             // 
+            // tuVanBindingSource
+            // 
+            this.tuVanBindingSource.DataMember = "TuVan";
+            this.tuVanBindingSource.DataSource = this.data;
+            // 
             // loaiTuVanBindingSource
             // 
             this.loaiTuVanBindingSource.DataMember = "LoaiTuVan";
@@ -619,6 +611,7 @@
             // 
             // customGridControl2
             // 
+            this.customGridControl2.DataSource = this.lichSuGiaoDichBindingSource;
             this.customGridControl2.Location = new System.Drawing.Point(7, 32);
             this.customGridControl2.MainView = this.customGridView2;
             this.customGridControl2.MenuManager = this.bm;
@@ -629,6 +622,16 @@
             this.customGridControl2.TabIndex = 15;
             this.customGridControl2.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.customGridView2});
+            // 
+            // lichSuGiaoDichBindingSource
+            // 
+            this.lichSuGiaoDichBindingSource.DataMember = "LichSuGiaoDich";
+            this.lichSuGiaoDichBindingSource.DataSource = this.dataReport;
+            // 
+            // dataReport
+            // 
+            this.dataReport.DataSetName = "DataReport";
+            this.dataReport.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // customGridView2
             // 
@@ -914,6 +917,16 @@
             this.repositoryItemLookUpEdit1.DisplayMember = "HoTen";
             this.repositoryItemLookUpEdit1.Name = "repositoryItemLookUpEdit1";
             this.repositoryItemLookUpEdit1.ValueMember = "TenDangNhap";
+            // 
+            // nguoidungBS
+            // 
+            this.nguoidungBS.DataMember = "NguoiDung";
+            this.nguoidungBS.DataSource = this.dataHeThong;
+            // 
+            // dataHeThong
+            // 
+            this.dataHeThong.DataSetName = "DATA";
+            this.dataHeThong.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // colNgayTao
             // 
@@ -1592,11 +1605,6 @@
             this.layoutControlItem7.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem7.TextVisible = false;
             // 
-            // dataReport
-            // 
-            this.dataReport.DataSetName = "DataReport";
-            this.dataReport.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // tuVanTableAdapter
             // 
             this.tuVanTableAdapter.ClearBeforeFill = true;
@@ -1636,6 +1644,10 @@
             // 
             this.phieuDatHangTableAdapter1.ClearBeforeFill = true;
             // 
+            // lichSuGiaoDichTableAdapter
+            // 
+            this.lichSuGiaoDichTableAdapter.ClearBeforeFill = true;
+            // 
             // loaiTuVanTableAdapter
             // 
             this.loaiTuVanTableAdapter.ClearBeforeFill = true;
@@ -1669,12 +1681,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataLayoutControl1)).EndInit();
             this.dataLayoutControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.lkeNVCS.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tuVanBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.data)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nguoidungBS)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataHeThong)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lkeTinhThanh.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tinhThanhBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.data)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtMoTa.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtNgaySinh.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtNgaySinh.Properties)).EndInit();
@@ -1689,16 +1698,21 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtNgheNghiep.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtKenhTT.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lookUpEdit1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tuVanBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.loaiTuVanBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cboHinhThuc.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.imageCollection1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.customGridControl2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lichSuGiaoDichBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataReport)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.customGridView2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemSpinEdit1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.customGridControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tuVanBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.customGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEdit1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nguoidungBS)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataHeThong)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repTrangThai)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.imageCollection3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repHinhThuc)).EndInit();
@@ -1751,7 +1765,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.u)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataReport)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1843,7 +1856,7 @@
         private DevExpress.XtraGrid.Columns.GridColumn colTienCK;
         private DevExpress.XtraGrid.Columns.GridColumn colThanhTien;
         private DevExpress.XtraGrid.Columns.GridColumn colTenSP;
-        
+        private DataReportTableAdapters.LichSuGiaoDichTableAdapter lichSuGiaoDichTableAdapter;
         private DevExpress.XtraEditors.Repository.RepositoryItemImageComboBox repositoryItemImageComboBox1;
         private DevExpress.Utils.ImageCollection imageCollection2;
         private DevExpress.XtraGrid.Columns.GridColumn colGhiChu1;

@@ -22,15 +22,18 @@ namespace CRM.Dictionaries
             cboHinhThuc.Properties.Items.AddEnum(typeof(HinhThucLienLac), true);
             repHinhThuc.Items.AddEnum(typeof(HinhThucLienLac), true);
             repTrangThai.Items.AddEnum(typeof(TrangThaiTuVan), true);
-
-            OnReload();
-            Bindings();
         }
 
         private void FrmThongTinTuVan_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'data.NhomKH' table. You can move, or remove it, as needed.
+            this.nhomKHTableAdapter.Fill(this.data.NhomKH);
             UseEnableControl = false;
             LockControls(false);
+
+            OnReload();
+
+            Bindings();
         }
 
         private void Bindings()
@@ -75,7 +78,6 @@ namespace CRM.Dictionaries
 
         protected override void OnReload()
         {
-            this.nhomKHTableAdapter.Fill(this.data.NhomKH);
             this.loaiTuVanTableAdapter.Fill(this.data.LoaiTuVan);
             this.khachHangTableAdapter.FillByUser(this.data.KhachHang, HeThong.NguoiDungDangNhap.TenDangNhap);
             this.nguoiDungTableAdapter.Fill(this.dataHeThong.NguoiDung);
@@ -166,16 +168,6 @@ namespace CRM.Dictionaries
             return true;
         }
 
-
-
-        public void SetKhachHang(string makh)
-        {
-            var t = data.TuVan.FirstOrDefault();
-            if (t == null) return;
-            KhachHangSearchLookUpEdit.EditValue = t.KhachHang = makh;
-        }
-
-
         private void KhachHangSearchLookUpEdit_EditValueChanged(object sender, EventArgs e)
         {
             string ma = (KhachHangSearchLookUpEdit.EditValue == DBNull.Value
@@ -221,7 +213,7 @@ namespace CRM.Dictionaries
                 var dataHistory = new CRMData();
 
                 customGridControl1.DataSource = this.tuVanTableAdapter1.GetDataByKhachHang(kh.MaKH);
-                //this.lichSuGiaoDichTableAdapter.Fill(dataReport.LichSuGiaoDich, kh.MaKH);
+                this.lichSuGiaoDichTableAdapter.Fill(dataReport.LichSuGiaoDich, kh.MaKH);
             }
         }
 

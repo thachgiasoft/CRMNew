@@ -606,11 +606,6 @@ namespace Lotus.Base
 
         private void FrmBase_Load(object sender, EventArgs e)
         {
-            var p = HeThong.LayPhanQuyen(ChucNang, HeThong.TenDangNhap, false);
-            if (p == null) return;
-
-            _quyen = p;
-
             EnableControls(true, true, true);
             LockControls(true);
         }
