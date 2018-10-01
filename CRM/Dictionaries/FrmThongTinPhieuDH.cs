@@ -39,6 +39,15 @@ namespace CRM.Dictionaries
             _isRead = isReadOnly;
         }
 
+        string _makh = string.Empty;
+        public FrmThongTinPhieuDH(string sophieu, string makh)
+        {
+            InitializeComponent();
+            _soPhieu = sophieu;
+            _makh = makh;
+        }
+
+
         private void FrmThongTinPhieuDH_Load(object sender, EventArgs e)
         {
             HinhThucImageComboBoxEdit.Properties.Items.AddEnum(typeof(HinhThucLienLac), true);
@@ -53,6 +62,14 @@ namespace CRM.Dictionaries
 
             if (_isRead)
                 LockControls(true);
+
+            if (_makh != string.Empty)
+            {
+                var p = data.PhieuDatHang.FirstOrDefault();
+                if (p == null) return;
+
+                KhachHangSearchLookUpEdit.EditValue = p.KhachHang = _makh;
+            }
         }
      
 
@@ -99,7 +116,7 @@ namespace CRM.Dictionaries
            
         }
 
-
+     
 
         protected override void OnShown(EventArgs e)
         {
@@ -144,6 +161,13 @@ namespace CRM.Dictionaries
                 btnHuy.Enabled = false;
                 btnSave.Enabled = false;
 
+            }
+
+            if (EditMode == CRM.EditMode.Add && _quyen.Them)
+            {
+                LockControls(false);
+                btnHuy.Enabled = true;
+                btnSave.Enabled = true;
             }
 
             if (_isRead)
@@ -297,7 +321,7 @@ namespace CRM.Dictionaries
                 txtDiaChi.Text = kh.DiaChi;
 
                 customGridControl4.DataSource = this.tuVanTableAdapter.GetDataByKhachHang(kh.MaKH);
-                customGridControl3.DataSource = this.lichSuGiaoDichTableAdapter.GetData(kh.MaKH);
+                //customGridControl3.DataSource = this.lichSuGiaoDichTableAdapter.GetData(kh.MaKH);
             }
         }
 
