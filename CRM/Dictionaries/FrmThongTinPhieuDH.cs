@@ -147,7 +147,12 @@ namespace CRM.Dictionaries
             }
 
             if (_isRead)
-                btnHuy.Enabled = false; 
+            {
+                btnHuy.Enabled = false;
+                LockControls(true);
+                btnHuy.Enabled = false;
+                btnSave.Enabled = false;
+            }
 
             // xu ly cho nay ..
             //...
