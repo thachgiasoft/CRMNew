@@ -606,13 +606,17 @@ namespace Lotus.Base
 
         private void FrmBase_Load(object sender, EventArgs e)
         {
-            var p = HeThong.LayPhanQuyen(ChucNang, HeThong.TenDangNhap, false);
-            if (p == null) return;
+            try
+            {
+                var p = HeThong.LayPhanQuyen(ChucNang, HeThong.TenDangNhap, false);
+                if (p == null) return;
 
-            _quyen = p;
+                _quyen = p;
 
-            EnableControls(true, true, true);
-            LockControls(true);
+                EnableControls(true, true, true);
+                LockControls(true);
+            }
+            catch { }
         }
 
         protected DATA.PhanQuyenRow _quyen;
@@ -660,9 +664,11 @@ namespace Lotus.Base
         protected override void OnShown(EventArgs e)
         {
             base.OnShown(e);
+            if (IsMdiChild) return;
 
             if (_quyen == null) return;
             bool locked = !(_quyen.Sua | _quyen.Them);
+          
             LockControls(locked);            
         }
 
