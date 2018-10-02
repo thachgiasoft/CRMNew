@@ -129,7 +129,7 @@
       <DependentUpon>CRMData.xsd</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="CRMData1.Designer.cs">
+    <Compile Include="CRMData.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>CRMData.xsd</DependentUpon>
@@ -139,6 +139,12 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>DataReport.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Dictionaries\FrmDonViGiaoHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dictionaries\FrmDonViGiaoHang.designer.cs">
+      <DependentUpon>FrmDonViGiaoHang.cs</DependentUpon>
     </Compile>
     <Compile Include="Dictionaries\FrmLoaiTuVan.cs">
       <SubType>Form</SubType>
@@ -329,6 +335,9 @@
       <DependentUpon>PhieuXuatKhoBH.cs</DependentUpon>
     </Compile>
     <Compile Include="Utils.cs" />
+    <EmbeddedResource Include="Dictionaries\FrmDonViGiaoHang.resx">
+      <DependentUpon>FrmDonViGiaoHang.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Dictionaries\FrmLoaiTuVan.resx">
       <DependentUpon>FrmLoaiTuVan.cs</DependentUpon>
     </EmbeddedResource>
@@ -442,7 +451,7 @@
     <None Include="CRMData.xsd">
       <Generator>MSDataSetGenerator</Generator>
       <SubType>Designer</SubType>
-      <LastGenOutput>CRMData1.Designer.cs</LastGenOutput>
+      <LastGenOutput>CRMData.Designer.cs</LastGenOutput>
     </None>
     <None Include="CRMData.xss">
       <DependentUpon>CRMData.xsd</DependentUpon>

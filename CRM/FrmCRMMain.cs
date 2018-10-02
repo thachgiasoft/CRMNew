@@ -168,6 +168,12 @@ namespace CRM
             OpenForm<FrmLoaiTuVan>(HeThong.ChucNangDangChon);
         }
 
+        private void btnDonViGiaoHang_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            HeThong.ChucNangDangChon = e.Item.Tag == null ? string.Empty : e.Item.Tag.ToString();
+            OpenForm<FrmDonViGiaoHang>(HeThong.ChucNangDangChon);
+        }
+
        
     }
 }

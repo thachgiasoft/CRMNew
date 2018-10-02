@@ -27,6 +27,14 @@ namespace CRM.Dictionaries
             _soPhieu = sophieu;
         }
 
+        string _makh = string.Empty;
+        public FrmThongTinPhieuTH(string sophieu, string makh)
+        {
+            InitializeComponent();
+            _soPhieu = sophieu;
+            _makh = makh;
+        }
+
         private void FrmThongTinPhieuDH_Load(object sender, EventArgs e)
         {         
             UseEnableControl = false;
@@ -34,6 +42,14 @@ namespace CRM.Dictionaries
 
             OnReload();
             Bindings();
+
+            if (_makh != string.Empty)
+            {
+                var p = data.PhieuTraHang.FirstOrDefault();
+                if (p == null) return;
+
+                KhachHangSearchLookUpEdit.EditValue = p.KhachHang = _makh;
+            }
         }
 
         private void Bindings()
@@ -157,20 +173,45 @@ namespace CRM.Dictionaries
             string ma = (KhachHangSearchLookUpEdit.EditValue == DBNull.Value
                         || KhachHangSearchLookUpEdit.EditValue == null) ? string.Empty : KhachHangSearchLookUpEdit.EditValue.ToString();
 
+            phieuDatHangTableAdapter.FillByKhachHang(data.PhieuDatHang, ma);
+
             var kh = data.KhachHang.FindByMaKH(ma);
             if (kh == null)
             {
                 txtTenKH.Text =
-                txtSoDT.Text =                 
+                txtSoDT.Text =
+                txtEmail.Text =
+                txtSoCMT.Text =
+                txtLinkFB.Text =
+                txtNgheNghiep.Text =
+                txtKenhTT.Text =
+                txtMucDichSD.Text =
+                txtBenhLy.Text =
+                txtMoTa.Text =
+                dtNgaySinh.Text =
                 txtDiaChi.Text = string.Empty;
                 lkeNhomKH.EditValue = null;
+                lookTinhThanh.EditValue = null;
+                
             }
             else
             {
                 txtTenKH.Text = kh.TenKH;
                 txtSoDT.Text = kh.SoDT;
-                lkeNhomKH.EditValue = kh.NhomKH;
+                txtEmail.Text = kh.Email;
                 txtDiaChi.Text = kh.DiaChi;
+                cbGioiTinh.EditValue = kh.GioiTinh;
+                txtSoCMT.Text = kh.SoCMT;
+                txtLinkFB.Text = kh.LinkFB;
+                txtNgheNghiep.Text = kh.NgheNghiep;
+                txtKenhTT.Text = kh.KenhTT;
+                txtMucDichSD.Text = kh.MucDichSuDung;
+                txtBenhLy.Text = kh.BenhLy;
+                txtMoTa.Text = kh.GhiChu;
+                lkeNhomKH.EditValue = kh.NhomKH;
+                if (!kh.IsNgaySinhNull()) dtNgaySinh.DateTime = kh.NgaySinh;
+                else dtNgaySinh.Text = string.Empty;
+                lookTinhThanh.EditValue = kh.TinhThanh;                               
             }
         }
 
@@ -253,11 +294,29 @@ namespace CRM.Dictionaries
             customGridView1.UpdateCurrentRow();
             phieuTraHangBindingSource.EndEdit();
 
-            if (customGridView1.HasColumnErrors) return false;
-        
-            
+            if (customGridView1.DataRowCount == 0)
+            {
+                MsgBox.ShowWarningDialog("Vui lòng nhập chi tiết");
+                return false;
+            }
+            if (customGridView1.HasColumnErrors)
+            {
+                MsgBox.ShowWarningDialog("Vui lòng kiểm tra hợp lệ dữ liệu");
+                return false;
+            }
+            if (lkePhieuDat.EditValue == null || lkePhieuDat.EditValue == DBNull.Value)
+            {
+                lkePhieuDat.ErrorText = "Không được trống";
+                return false;
+            }
+            if (KhachHangSearchLookUpEdit.EditValue == null || KhachHangSearchLookUpEdit.EditValue == DBNull.Value)
+            {
+                KhachHangSearchLookUpEdit.ErrorText = "Không được trống";
+                return false;
+            }
+
             // kiem tra gì đó ....
-            
+
             return true;
         }
 
@@ -283,6 +342,7 @@ namespace CRM.Dictionaries
             dtCTTra.Clear();
             foreach (var ct in dtCT)
             {
+
                 var t = dtCTTra.NewCTPhieuTraHangRow();
                 t.STT = dtCTTra.Rows.Count + 1;
                 t.SanPham = ct.SanPham;
@@ -291,11 +351,23 @@ namespace CRM.Dictionaries
                 t.DonGia = ct.DonGia;
                 t.ThanhTien = ct.ThanhTien;
                 t.DVT = ct.DVT;
-                
+
+
+                var obj = ctPhieuTraHangTableAD.LaySoLuongDatHopLe(t.STT, pDat.SoPhieu, ct.SanPham, _soPhieu);
+                double slTraHopLe = obj == null ? 0 : Convert.ToDouble(obj);
+                t.SoLuong = slTraHopLe;
+
+                if (slTraHopLe == 0) continue;
 
                 dtCTTra.AddCTPhieuTraHangRow(t);
             }
             CapNhatSoTien();
+
+            if (dtCTTra.Rows.Count == 0)
+            {
+                MsgBox.ShowWarningDialog("Phiếu này đã trả hết hàng");
+                lkePhieuDat.EditValue = null;
+            }
         }
     }
 }

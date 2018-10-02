@@ -198,7 +198,9 @@ namespace CRM.Dictionaries
                 txtDiaChi.Text = string.Empty;
                 lkeNhomKH.EditValue = null;
                 lkeTinhThanh.EditValue = null;
-                customGridControl1.DataSource = null;
+                grdLichSuTuongTac.DataSource = null;
+                grdLichSuMuaHang.DataSource =
+                grdLichSuTraHang.DataSource = null;
             }
             else
             {
@@ -220,8 +222,9 @@ namespace CRM.Dictionaries
                 lkeTinhThanh.EditValue = kh.TinhThanh;
                 var dataHistory = new CRMData();
 
-                customGridControl1.DataSource = this.tuVanTableAdapter1.GetDataByKhachHang(kh.MaKH);
-                //this.lichSuGiaoDichTableAdapter.Fill(dataReport.LichSuGiaoDich, kh.MaKH);
+                grdLichSuTuongTac.DataSource = this.tuVanTableAdapter1.GetDataByKhachHang(kh.MaKH);
+                grdLichSuMuaHang.DataSource = this.lichSuMuaHangTableAdapter.GetData(kh.MaKH);
+                grdLichSuTraHang.DataSource = this.lichSuTraHangTableAdapter.GetData(kh.MaKH);
             }
         }
 
@@ -344,6 +347,40 @@ namespace CRM.Dictionaries
             var f = new FrmThongTinPhieuDH(_sophieudat, true);
             f.ShowDialog();
             
+        }
+
+        private void btnThemMuaHang_Click(object sender, EventArgs e)
+        {
+            var t = data.TuVan.FirstOrDefault();
+            if (t == null) return;
+            if (string.IsNullOrEmpty(t.KhachHang))
+            {
+                MsgBox.ShowWarningDialog("Vui lòng chọn khách hàng");
+                return;
+            }
+
+            FrmThongTinPhieuDH f = new FrmThongTinPhieuDH(string.Empty, t.KhachHang);
+
+            f.ChucNang = "btnPhieuDatHang";
+            if (f.ShowDialog() == DialogResult.OK)
+                grdLichSuMuaHang.DataSource = lichSuMuaHangTableAdapter.GetData(t.KhachHang);
+        }
+
+        private void btnThemTraHang_Click(object sender, EventArgs e)
+        {
+            var t = data.TuVan.FirstOrDefault();
+            if (t == null) return;
+            if (string.IsNullOrEmpty(t.KhachHang))
+            {
+                MsgBox.ShowWarningDialog("Vui lòng chọn khách hàng");
+                return;
+            }
+
+            FrmThongTinPhieuTH f = new FrmThongTinPhieuTH(string.Empty, t.KhachHang);
+
+            f.ChucNang = "btnPhieuTraHang";
+            if (f.ShowDialog() == DialogResult.OK)
+                grdLichSuTraHang.DataSource = lichSuTraHangTableAdapter.GetData(t.KhachHang);
         }
 
     }

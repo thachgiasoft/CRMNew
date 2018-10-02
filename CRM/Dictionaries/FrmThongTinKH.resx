@@ -442,10 +442,10 @@
 </value>
   </data>
   <metadata name="lichSuTraHangBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 134</value>
+    <value>163, 212</value>
   </metadata>
   <metadata name="dataReport.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>513, 95</value>
+    <value>181, 173</value>
   </metadata>
   <data name="btnMuaHang.ImageOptions.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -475,10 +475,10 @@
 </value>
   </data>
   <metadata name="tuVanBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>625, 95</value>
+    <value>293, 173</value>
   </metadata>
   <metadata name="imageCollection3.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>934, 95</value>
+    <value>602, 173</value>
   </metadata>
   <assembly alias="DevExpress.Utils.v17.1" name="DevExpress.Utils.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
   <data name="imageCollection3.ImageStream" type="DevExpress.Utils.ImageCollectionStreamer, DevExpress.Utils.v17.1" mimetype="application/x-microsoft.net.object.bytearray.base64">
@@ -526,7 +526,7 @@
 </value>
   </data>
   <metadata name="imageCollection4.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>1080, 95</value>
+    <value>17, 212</value>
   </metadata>
   <data name="imageCollection4.ImageStream" type="DevExpress.Utils.ImageCollectionStreamer, DevExpress.Utils.v17.1" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -547,16 +547,16 @@
 </value>
   </data>
   <metadata name="nguoidungBS.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>1192, 56</value>
+    <value>307, 134</value>
   </metadata>
   <metadata name="dataHeThong.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>1066, 56</value>
+    <value>181, 134</value>
   </metadata>
   <metadata name="lichSuMuaHangBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>429, 134</value>
+    <value>575, 212</value>
   </metadata>
   <metadata name="imageCollection2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>788, 95</value>
+    <value>456, 173</value>
   </metadata>
   <data name="imageCollection2.ImageStream" type="DevExpress.Utils.ImageCollectionStreamer, DevExpress.Utils.v17.1" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -570,22 +570,22 @@
 </value>
   </data>
   <metadata name="tinhThanhBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>1009, 17</value>
+    <value>190, 56</value>
   </metadata>
   <metadata name="mucDichSDBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>351, 56</value>
+    <value>181, 95</value>
   </metadata>
   <metadata name="kenhTTBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>732, 56</value>
+    <value>562, 95</value>
   </metadata>
   <metadata name="benhLyBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 56</value>
+    <value>555, 56</value>
   </metadata>
   <metadata name="nhomKHBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>658, 17</value>
   </metadata>
   <metadata name="imageCollection1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>203, 95</value>
+    <value>618, 134</value>
   </metadata>
   <data name="imageCollection1.ImageStream" type="DevExpress.Utils.ImageCollectionStreamer, DevExpress.Utils.v17.1" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -596,16 +596,6 @@
         cmVhbWVyAgAAAAlJbWFnZVNpemUERGF0YQQHE1N5c3RlbS5EcmF3aW5nLlNpemUDAAAAAgIAAAAF/P//
         /xNTeXN0ZW0uRHJhd2luZy5TaXplAgAAAAV3aWR0aAZoZWlnaHQAAAgIAwAAABAAAAAQAAAACQUAAAAP
         BQAAAAAAAAACCw==
-</value>
-  </data>
-  <data name="lgGD.CaptionImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAABh0RVh0VGl0
-        bGUAU2FsZXNQZXJpb2Q7U2FsZXM7q3tPkwAAAO1JREFUOE+lkjEOgjAYhbkIp3ByZ/UUjC6cwckbeAhN
-        WExwcyExcXLE0cTBoINxccT3yN9C7V/U+JKvef3782gLUdM0f9EOk9nGEIMMFKAW6FnjWtsXChiDfLoo
-        y/X+tLs9nhdCzxrXpEcNYHo+Xx22mKvimoTEmHoBGd8Cb4WauE6ykwzWDRCWwEoL4HFQL2C7ABRGbD6e
-        71c2GWkBvBPUa1gngM28bfZYSd1CqQEcUCy4PfhBqUfggKJ3iX1VaeIAeQGDn1ELMN4EkOCP1H+Y9ALs
-        DgyDvzJ7DU7AJ6RZ47uAED8F8I3vvkqT6AXMben+ZZjP3wAAAABJRU5ErkJggg==
 </value>
   </data>
   <data name="lgKH.CaptionImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
@@ -629,6 +619,16 @@
         +E7aRnkPYfJ3UvcC+kaHcdXu9pkAAAAASUVORK5CYII=
 </value>
   </data>
+  <data name="lgGD.CaptionImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAABh0RVh0VGl0
+        bGUAU2FsZXNQZXJpb2Q7U2FsZXM7q3tPkwAAAO1JREFUOE+lkjEOgjAYhbkIp3ByZ/UUjC6cwckbeAhN
+        WExwcyExcXLE0cTBoINxccT3yN9C7V/U+JKvef3782gLUdM0f9EOk9nGEIMMFKAW6FnjWtsXChiDfLoo
+        y/X+tLs9nhdCzxrXpEcNYHo+Xx22mKvimoTEmHoBGd8Cb4WauE6ykwzWDRCWwEoL4HFQL2C7ABRGbD6e
+        71c2GWkBvBPUa1gngM28bfZYSd1CqQEcUCy4PfhBqUfggKJ3iX1VaeIAeQGDn1ELMN4EkOCP1H+Y9ALs
+        DgyDvzJ7DU7AJ6RZ47uAED8F8I3vvkqT6AXMben+ZZjP3wAAAABJRU5ErkJggg==
+</value>
+  </data>
   <data name="layoutControlGroup2.CaptionImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAABF0RVh0VGl0
@@ -640,31 +640,31 @@
 </value>
   </data>
   <metadata name="nhomKHTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>836, 17</value>
+    <value>17, 56</value>
   </metadata>
   <metadata name="tinhThanhTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>1194, 17</value>
+    <value>375, 56</value>
   </metadata>
   <metadata name="benhLyTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>187, 56</value>
-  </metadata>
-  <metadata name="mucDichSDTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>544, 56</value>
-  </metadata>
-  <metadata name="kenhTTTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>902, 56</value>
-  </metadata>
-  <metadata name="nguoiDungTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 95</value>
   </metadata>
+  <metadata name="mucDichSDTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>374, 95</value>
+  </metadata>
+  <metadata name="kenhTTTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 134</value>
+  </metadata>
+  <metadata name="nguoiDungTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>432, 134</value>
+  </metadata>
   <metadata name="tuVanTableAdapter1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>349, 95</value>
+    <value>17, 173</value>
   </metadata>
   <metadata name="lichSuTraHangTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>226, 134</value>
+    <value>372, 212</value>
   </metadata>
   <metadata name="lichSuMuaHangTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>645, 134</value>
+    <value>17, 251</value>
   </metadata>
   <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>185</value>

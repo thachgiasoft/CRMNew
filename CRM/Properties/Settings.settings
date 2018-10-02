@@ -2,16 +2,16 @@
 <SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="CRM.Properties" GeneratedClassName="Settings">
   <Profiles />
   <Settings>
+    <Setting Name="RemoteUri" Type="System.String" Scope="User">
+      <Value Profile="(Default)">http://localhost/CRMCareUpdate/info.xml</Value>
+    </Setting>
     <Setting Name="CRMConnString" Type="(Connection string)" Scope="Application">
       <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
 &lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
-  &lt;ConnectionString&gt;Data Source=DESKTOP-O003A0D;Initial Catalog=CRM_WIN;User ID=sa;Password=backinh27&lt;/ConnectionString&gt;
+  &lt;ConnectionString&gt;F37OXfeToZvw6DNZ732mTyzaG2UiIUNUxsQQRNlWfjed4vxxmOJHEWvqfKBDLnuB6PWqgv7upD6na38odQn5hCcudU2SkrluLCi5agEtmq5rug6YfON/z2x82uYRfsaS&lt;/ConnectionString&gt;
   &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
 &lt;/SerializableConnectionString&gt;</DesignTimeValue>
-      <Value Profile="(Default)">Data Source=DESKTOP-O003A0D;Initial Catalog=CRM_WIN;User ID=sa;Password=backinh27</Value>
-    </Setting>
-    <Setting Name="RemoteUri" Type="System.String" Scope="User">
-      <Value Profile="(Default)">http://localhost/CRMCareUpdate/info.xml</Value>
+      <Value Profile="(Default)">F37OXfeToZvw6DNZ732mTyzaG2UiIUNUxsQQRNlWfjed4vxxmOJHEWvqfKBDLnuB6PWqgv7upD6na38odQn5hCcudU2SkrluLCi5agEtmq5rug6YfON/z2x82uYRfsaS</Value>
     </Setting>
   </Settings>
 </SettingsFile>

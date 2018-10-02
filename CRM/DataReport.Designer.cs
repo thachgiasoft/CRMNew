@@ -2823,6 +2823,12 @@ namespace CRM {
             
             private global::System.Data.DataColumn columnGhiChu;
             
+            private global::System.Data.DataColumn columnShipper;
+            
+            private global::System.Data.DataColumn columnNVBanHang;
+            
+            private global::System.Data.DataColumn columnNVVanDon;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public LichSuMuaHangDataTable() {
@@ -2954,6 +2960,30 @@ namespace CRM {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn ShipperColumn {
+                get {
+                    return this.columnShipper;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn NVBanHangColumn {
+                get {
+                    return this.columnNVBanHang;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn NVVanDonColumn {
+                get {
+                    return this.columnNVVanDon;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -2989,7 +3019,7 @@ namespace CRM {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public LichSuMuaHangRow AddLichSuMuaHangRow(System.DateTime NgayPhieu, string SoPhieu, string MucDichSD, string SanPham, double DonGia, string DVT, double SLDat, double CK, double TienCK, double ThanhTien, string TenSP, string GhiChu) {
+            public LichSuMuaHangRow AddLichSuMuaHangRow(System.DateTime NgayPhieu, string SoPhieu, string MucDichSD, string SanPham, double DonGia, string DVT, double SLDat, double CK, double TienCK, double ThanhTien, string TenSP, string GhiChu, string Shipper, string NVBanHang, string NVVanDon) {
                 LichSuMuaHangRow rowLichSuMuaHangRow = ((LichSuMuaHangRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         NgayPhieu,
@@ -3003,7 +3033,10 @@ namespace CRM {
                         TienCK,
                         ThanhTien,
                         TenSP,
-                        GhiChu};
+                        GhiChu,
+                        Shipper,
+                        NVBanHang,
+                        NVVanDon};
                 rowLichSuMuaHangRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowLichSuMuaHangRow);
                 return rowLichSuMuaHangRow;
@@ -3038,6 +3071,9 @@ namespace CRM {
                 this.columnThanhTien = base.Columns["ThanhTien"];
                 this.columnTenSP = base.Columns["TenSP"];
                 this.columnGhiChu = base.Columns["GhiChu"];
+                this.columnShipper = base.Columns["Shipper"];
+                this.columnNVBanHang = base.Columns["NVBanHang"];
+                this.columnNVVanDon = base.Columns["NVVanDon"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -3067,6 +3103,12 @@ namespace CRM {
                 base.Columns.Add(this.columnTenSP);
                 this.columnGhiChu = new global::System.Data.DataColumn("GhiChu", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnGhiChu);
+                this.columnShipper = new global::System.Data.DataColumn("Shipper", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnShipper);
+                this.columnNVBanHang = new global::System.Data.DataColumn("NVBanHang", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnNVBanHang);
+                this.columnNVVanDon = new global::System.Data.DataColumn("NVVanDon", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnNVVanDon);
                 this.columnNgayPhieu.ReadOnly = true;
                 this.columnNgayPhieu.Caption = "Ngày";
                 this.columnSoPhieu.AllowDBNull = false;
@@ -3097,6 +3139,11 @@ namespace CRM {
                 this.columnGhiChu.ReadOnly = true;
                 this.columnGhiChu.Caption = "Ghi chú";
                 this.columnGhiChu.MaxLength = 200;
+                this.columnShipper.MaxLength = 200;
+                this.columnNVBanHang.Caption = "Nv bán hàng";
+                this.columnNVBanHang.MaxLength = 50;
+                this.columnNVVanDon.Caption = "NV vận đơn";
+                this.columnNVVanDon.MaxLength = 50;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -5472,6 +5519,54 @@ namespace CRM {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string Shipper {
+                get {
+                    try {
+                        return ((string)(this[this.tableLichSuMuaHang.ShipperColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Shipper\' in table \'LichSuMuaHang\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableLichSuMuaHang.ShipperColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string NVBanHang {
+                get {
+                    try {
+                        return ((string)(this[this.tableLichSuMuaHang.NVBanHangColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'NVBanHang\' in table \'LichSuMuaHang\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableLichSuMuaHang.NVBanHangColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string NVVanDon {
+                get {
+                    try {
+                        return ((string)(this[this.tableLichSuMuaHang.NVVanDonColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'NVVanDon\' in table \'LichSuMuaHang\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableLichSuMuaHang.NVVanDonColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsNgayPhieuNull() {
                 return this.IsNull(this.tableLichSuMuaHang.NgayPhieuColumn);
             }
@@ -5588,6 +5683,42 @@ namespace CRM {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetGhiChuNull() {
                 this[this.tableLichSuMuaHang.GhiChuColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsShipperNull() {
+                return this.IsNull(this.tableLichSuMuaHang.ShipperColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetShipperNull() {
+                this[this.tableLichSuMuaHang.ShipperColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsNVBanHangNull() {
+                return this.IsNull(this.tableLichSuMuaHang.NVBanHangColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetNVBanHangNull() {
+                this[this.tableLichSuMuaHang.NVBanHangColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsNVVanDonNull() {
+                return this.IsNull(this.tableLichSuMuaHang.NVVanDonColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetNVVanDonNull() {
+                this[this.tableLichSuMuaHang.NVVanDonColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -7769,6 +7900,9 @@ group by NKH.ID, NKH.TenNhom";
             tableMapping.ColumnMappings.Add("ThanhTien", "ThanhTien");
             tableMapping.ColumnMappings.Add("TenSP", "TenSP");
             tableMapping.ColumnMappings.Add("GhiChu", "GhiChu");
+            tableMapping.ColumnMappings.Add("Shipper", "Shipper");
+            tableMapping.ColumnMappings.Add("NVBanHang", "NVBanHang");
+            tableMapping.ColumnMappings.Add("NVVanDon", "NVVanDon");
             this._adapter.TableMappings.Add(tableMapping);
         }
         
@@ -7792,6 +7926,9 @@ p.NgayPhieu
 ,p.SoPhieu as SoPhieu
 ,p.MucDichSD
 ,p.GhiChu
+,p.Shipper
+,p.NVBanHang
+,p.NVVanDon
 
 ,c.SanPham
 ,c.DonGia

@@ -373,11 +373,20 @@ namespace CRM.Dictionaries
 
         private void btnAddTV_Click(object sender, EventArgs e)
         {
-            FrmThongTinTuVan f = new FrmThongTinTuVan(string.Empty);
             var k = data.KhachHang.FirstOrDefault();
             if (k == null) return;
+
+            if (Data.IsNewRow(k))
+            {
+                MsgBox.ShowWarningDialog("Khách hàng chưa được tạo, không thể thực hiện thao tác này");
+                return;
+            }
+
+            FrmThongTinTuVan f = new FrmThongTinTuVan(string.Empty);
+         
             f.SetKhachHang(k.MaKH);
-            f.ShowDialog();
+            if(f.ShowDialog()==DialogResult.OK)
+                customGridControl4.DataSource = tuVanTableAdapter1.GetDataByKhachHang(_maKH);
         }
 
         private void btnMuaHang_Click(object sender, EventArgs e)
@@ -385,10 +394,34 @@ namespace CRM.Dictionaries
            
             var k = data.KhachHang.FirstOrDefault();
             if (k == null) return;
+            if (Data.IsNewRow(k))
+            {
+                MsgBox.ShowWarningDialog("Khách hàng chưa được tạo, không thể thực hiện thao tác này");
+                return;
+            }
+
             FrmThongTinPhieuDH f = new FrmThongTinPhieuDH(string.Empty, k.MaKH);
         
             f.ChucNang = "btnPhieuDatHang";
-            f.ShowDialog();
+            if(f.ShowDialog()==DialogResult.OK)
+                customGridControl1.DataSource = lichSuMuaHangTableAdapter.GetData(_maKH);            
+        }
+
+        private void btnTraHang_Click(object sender, EventArgs e)
+        {
+            var k = data.KhachHang.FirstOrDefault();
+            if (k == null) return;
+            if (Data.IsNewRow(k))
+            {
+                MsgBox.ShowWarningDialog("Khách hàng chưa được tạo, không thể thực hiện thao tác này");
+                return;
+            }
+
+            FrmThongTinPhieuTH f = new FrmThongTinPhieuTH(string.Empty, k.MaKH);
+
+            f.ChucNang = "btnPhieuTraHang";
+            if(f.ShowDialog()==DialogResult.OK)
+                customGridControl2.DataSource = lichSuTraHangTableAdapter.GetData(_maKH);
         }
     }
 }

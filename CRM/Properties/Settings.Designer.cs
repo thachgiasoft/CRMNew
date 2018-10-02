@@ -23,17 +23,6 @@ namespace CRM.Properties {
             }
         }
         
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-O003A0D;Initial Catalog=CRM_WIN;User ID=sa;Password=backinh27" +
-            "")]
-        public string CRMConnString {
-            get {
-                return ((string)(this["CRMConnString"]));
-            }
-        }
-        
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("http://localhost/CRMCareUpdate/info.xml")]
@@ -43,6 +32,17 @@ namespace CRM.Properties {
             }
             set {
                 this["RemoteUri"] = value;
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("F37OXfeToZvw6DNZ732mTyzaG2UiIUNUxsQQRNlWfjed4vxxmOJHEWvqfKBDLnuB6PWqgv7upD6na38od" +
+            "Qn5hCcudU2SkrluLCi5agEtmq5rug6YfON/z2x82uYRfsaS")]
+        public string CRMConnString {
+            get {
+                return ((string)(this["CRMConnString"]));
             }
         }
     }

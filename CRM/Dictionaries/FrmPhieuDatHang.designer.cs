@@ -70,6 +70,8 @@
             this.btnInPhieuXuat = new DevExpress.XtraBars.BarButtonItem();
             this.barSubItem1 = new DevExpress.XtraBars.BarSubItem();
             this.btnInPhieuXuatBH = new DevExpress.XtraBars.BarButtonItem();
+            this.colNVVanDon = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colShipper = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this._dtNhatKy)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bm)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rgCalc)).BeginInit();
@@ -264,7 +266,9 @@
             this.colNgayTrangThai,
             this.colTrangThai,
             this.colThanhToan,
-            this.colConLai});
+            this.colConLai,
+            this.colNVVanDon,
+            this.colShipper});
             this.customGridView1.FixedLineWidth = 1;
             this.customGridView1.FormatCode = null;
             this.customGridView1.GridControl = this.customGridControl1;
@@ -643,6 +647,24 @@
             this.btnInPhieuXuatBH.Name = "btnInPhieuXuatBH";
             this.btnInPhieuXuatBH.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnInPhieuXuatBH_ItemClick);
             // 
+            // colNVVanDon
+            // 
+            this.colNVVanDon.FieldName = "NVVanDon";
+            this.colNVVanDon.Name = "colNVVanDon";
+            this.colNVVanDon.OptionsFilter.AutoFilterCondition = DevExpress.XtraGrid.Columns.AutoFilterCondition.Contains;
+            this.colNVVanDon.Visible = true;
+            this.colNVVanDon.VisibleIndex = 14;
+            this.colNVVanDon.Width = 100;
+            // 
+            // colShipper
+            // 
+            this.colShipper.FieldName = "Shipper";
+            this.colShipper.Name = "colShipper";
+            this.colShipper.OptionsFilter.AutoFilterCondition = DevExpress.XtraGrid.Columns.AutoFilterCondition.Contains;
+            this.colShipper.Visible = true;
+            this.colShipper.VisibleIndex = 15;
+            this.colShipper.Width = 200;
+            // 
             // FrmPhieuDatHang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -725,5 +747,7 @@
         private DevExpress.XtraBars.BarButtonItem btnInPhieuXuat;
         private DevExpress.XtraBars.BarSubItem barSubItem1;
         private DevExpress.XtraBars.BarButtonItem btnInPhieuXuatBH;
+        private DevExpress.XtraGrid.Columns.GridColumn colNVVanDon;
+        private DevExpress.XtraGrid.Columns.GridColumn colShipper;
     }
 }

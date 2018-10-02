@@ -50,6 +50,8 @@ namespace CRM.Dictionaries
 
         private void FrmThongTinPhieuDH_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'data.DonViGiaoHang' table. You can move, or remove it, as needed.
+           
             HinhThucImageComboBoxEdit.Properties.Items.AddEnum(typeof(HinhThucLienLac), true);
             repHinhThuc.Items.AddEnum(typeof(HinhThucLienLac), true);
             repTrangThai.Items.AddEnum(typeof(TrangThaiTuVan), true);
@@ -78,7 +80,7 @@ namespace CRM.Dictionaries
 
             phieuDatHangTableAdapter.FillBySoPhieu(data.PhieuDatHang, _soPhieu);
             ctPhieuDHAD.FillBySoPhieu(data.CTPhieuDatHang, _soPhieu);
-            customGridControl1.DataSource = data.CTPhieuDatHang;
+            gridChiTietDH.DataSource = data.CTPhieuDatHang;
 
 
             if (string.IsNullOrEmpty(_soPhieu))
@@ -108,7 +110,7 @@ namespace CRM.Dictionaries
             }
 
             sdPhieuGiamGIaAD.FillBySoPhieu(data.SDPhieuGiamGIa, _soPhieu); // cho này sleect k ra
-            customGridControl2.DataSource = data.SDPhieuGiamGIa;
+            gridPhieuGG.DataSource = data.SDPhieuGiamGIa;
 
             //tuVanTableAdapter.FillBySoPhieu(data.TuVan, _soPhieu);
             //customGridControl3.DataSource = data.TuVan;
@@ -186,6 +188,8 @@ namespace CRM.Dictionaries
 
         protected override void OnReload()
         {
+            this.donViGiaoHangTableAdapter.Fill(this.data.DonViGiaoHang);
+            this.nVVanDonTableAdapter.Fill(data.NVVanDon);
             this.nguoiDungTableAdapter.Fill(dataHeThong.NguoiDung);            
             this.nhomKHTableAdapter.Fill(this.data.NhomKH);            
             this.mucDichSDTableAdapter.Fill(this.data.MucDichSD);       
@@ -309,19 +313,47 @@ namespace CRM.Dictionaries
             if (kh == null)
             {
                 txtTenKH.Text =
-                txtSoDT.Text =                 
+                txtSoDT.Text =
+                txtEmail.Text =
+                txtSoCMT.Text =
+                txtLinkFB.Text =
+                txtNgheNghiep.Text =
+                txtKenhTT.Text =
+                txtMucDichSD.Text =
+                txtBenhLy.Text =
+                txtMoTa.Text =
+                dtNgaySinh.Text =
                 txtDiaChi.Text = string.Empty;
                 lkeNhomKH.EditValue = null;
+                lookTinhThanh.EditValue = null;
+
+                // cho này là gird khác
+                gridLishSuTT.DataSource = null;
+                grdLichSuMuaHang.DataSource = grdLichSuTraHang.DataSource = null;
             }
             else
             {
                 txtTenKH.Text = kh.TenKH;
                 txtSoDT.Text = kh.SoDT;
-                lkeNhomKH.EditValue = kh.NhomKH;
+                txtEmail.Text = kh.Email;
                 txtDiaChi.Text = kh.DiaChi;
+                cbgioiTinh.EditValue = kh.GioiTinh;
+                txtSoCMT.Text = kh.SoCMT;
+                txtLinkFB.Text = kh.LinkFB;
+                txtNgheNghiep.Text = kh.NgheNghiep;
+                txtKenhTT.Text = kh.KenhTT;
+                txtMucDichSD.Text = kh.MucDichSuDung;
+                txtBenhLy.Text = kh.BenhLy;
+                txtMoTa.Text = kh.GhiChu;
+                lkeNhomKH.EditValue = kh.NhomKH;
+                if (!kh.IsNgaySinhNull()) dtNgaySinh.DateTime = kh.NgaySinh;
+                else dtNgaySinh.Text = string.Empty;
+                lookTinhThanh.EditValue = kh.TinhThanh;
+                var dataHistory = new CRMData();
 
-                customGridControl4.DataSource = this.tuVanTableAdapter.GetDataByKhachHang(kh.MaKH);
-                //customGridControl3.DataSource = this.lichSuGiaoDichTableAdapter.GetData(kh.MaKH);
+                gridLishSuTT.DataSource = this.tuVanTableAdapter.GetDataByKhachHang(kh.MaKH);
+                grdLichSuMuaHang.DataSource = this.lichSuMuaHangTableAdapter.GetData(kh.MaKH);
+                grdLichSuTraHang.DataSource = this.lichSuTraHangTableAdapter.GetData(kh.MaKH);
             }
         }
 
