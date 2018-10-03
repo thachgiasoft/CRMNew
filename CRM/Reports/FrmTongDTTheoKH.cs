@@ -11,6 +11,7 @@ using System.Windows.Forms;
 using DevExpress.XtraGrid;
 using CRM;
 using CRM.Dictionaries;
+using Lotus.Libraries;
 namespace CRM.Reports
 {
     public partial class FrmTongDTTheoKH : FrmBaseReport
@@ -52,7 +53,20 @@ namespace CRM.Reports
 
             }
             else
-                tongDTTheoKhachHangTableAdapter.Fill(dataReport.TongDTTheoKhachHang, DateFrom, DateTo);
+            {
+                if(HeThong.NguoiDungDangNhap.Loai == (int)ChucDanh.NVKinhDoanh || HeThong.NguoiDungDangNhap.Loai == (int)ChucDanh.NVVanDon)
+                {
+                    tongDTTheoKhachHangTableAdapter.Fill(dataReport.TongDTTheoKhachHang, DateFrom, DateTo, HeThong.NguoiDungDangNhap.TenDangNhap, HeThong.NguoiDungDangNhap.Phong);
+                }
+                else if(HeThong.NguoiDungDangNhap.Loai == (int)ChucDanh.QuanLy)
+                {
+                    tongDTTheoKhachHangTableAdapter.Fill(dataReport.TongDTTheoKhachHang, DateFrom, DateTo, null, HeThong.NguoiDungDangNhap.Phong);
+                }
+                else if(HeThong.NguoiDungDangNhap.Loai == (int)ChucDanh.Admin)
+                {
+                    tongDTTheoKhachHangTableAdapter.Fill(dataReport.TongDTTheoKhachHang, DateFrom, DateTo, null, null);
+                }
+            }                
         }
        
        

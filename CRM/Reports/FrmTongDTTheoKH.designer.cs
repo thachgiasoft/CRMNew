@@ -42,6 +42,8 @@
             this.colSoDT = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colDiaChi = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colMaKH = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colSoDH = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colDTBQ = new DevExpress.XtraGrid.Columns.GridColumn();
             this.rsearchNhanVien = new DevExpress.XtraEditors.Repository.RepositoryItemSearchLookUpEdit();
             this.repositoryItemSearchLookUpEdit1View = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colMaNV = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -178,8 +180,8 @@
             this.colDoanhThu.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
             new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "DoanhThu", "{0:#,#0;(#,#0);-}")});
             this.colDoanhThu.Visible = true;
-            this.colDoanhThu.VisibleIndex = 4;
-            this.colDoanhThu.Width = 200;
+            this.colDoanhThu.VisibleIndex = 5;
+            this.colDoanhThu.Width = 138;
             // 
             // layoutControl1
             // 
@@ -240,7 +242,9 @@
             this.colSoDT,
             this.colDiaChi,
             this.colDoanhThu,
-            this.colMaKH});
+            this.colMaKH,
+            this.colSoDH,
+            this.colDTBQ});
             this.customGridView1.FixedLineWidth = 1;
             this.customGridView1.FormatCode = null;
             gridFormatRule1.Column = this.colDoanhThu;
@@ -305,6 +309,30 @@
             this.colMaKH.Visible = true;
             this.colMaKH.VisibleIndex = 0;
             this.colMaKH.Width = 120;
+            // 
+            // colSoDH
+            // 
+            this.colSoDH.DisplayFormat.FormatString = "#,#0";
+            this.colSoDH.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.colSoDH.FieldName = "SoDH";
+            this.colSoDH.Name = "colSoDH";
+            this.colSoDH.OptionsFilter.AutoFilterCondition = DevExpress.XtraGrid.Columns.AutoFilterCondition.Contains;
+            this.colSoDH.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
+            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "SoDH", "{0:#,#0}")});
+            this.colSoDH.Visible = true;
+            this.colSoDH.VisibleIndex = 4;
+            this.colSoDH.Width = 108;
+            // 
+            // colDTBQ
+            // 
+            this.colDTBQ.DisplayFormat.FormatString = "#,#0";
+            this.colDTBQ.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.colDTBQ.FieldName = "DTBQ";
+            this.colDTBQ.Name = "colDTBQ";
+            this.colDTBQ.OptionsFilter.AutoFilterCondition = DevExpress.XtraGrid.Columns.AutoFilterCondition.Contains;
+            this.colDTBQ.Visible = true;
+            this.colDTBQ.VisibleIndex = 6;
+            this.colDTBQ.Width = 120;
             // 
             // rsearchNhanVien
             // 
@@ -491,5 +519,7 @@
         private DevExpress.XtraGrid.Columns.GridColumn colDoanhThu;
         private DataReportTableAdapters.TongDTTheoKhachHangTableAdapter tongDTTheoKhachHangTableAdapter;
         private DevExpress.XtraGrid.Columns.GridColumn colMaKH;
+        private DevExpress.XtraGrid.Columns.GridColumn colSoDH;
+        private DevExpress.XtraGrid.Columns.GridColumn colDTBQ;
     }
 }

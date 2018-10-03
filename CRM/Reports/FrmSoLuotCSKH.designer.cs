@@ -28,17 +28,20 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmSoLuotCSKH));
             DevExpress.XtraGrid.GridFormatRule gridFormatRule1 = new DevExpress.XtraGrid.GridFormatRule();
             DevExpress.XtraEditors.FormatConditionRuleDataBar formatConditionRuleDataBar1 = new DevExpress.XtraEditors.FormatConditionRuleDataBar();
+            this.colSoLuot = new DevExpress.XtraGrid.Columns.GridColumn();
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
             this.customGridControl1 = new Lotus.Libraries.CustomGridControl();
-            this.soLuotCSKHBindingSource = new System.Windows.Forms.BindingSource();
+            this.soLuotCSKHBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataReport = new CRM.DataReport();
             this.customGridView1 = new Lotus.Libraries.CustomGridView();
             this.colNhanVien = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colHoTen1 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colSoLuot = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colSoKH = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colTiLe = new DevExpress.XtraGrid.Columns.GridColumn();
             this.rsearchNhanVien = new DevExpress.XtraEditors.Repository.RepositoryItemSearchLookUpEdit();
             this.repositoryItemSearchLookUpEdit1View = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colMaNV = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -49,8 +52,13 @@
             this.repTrangThai = new DevExpress.XtraEditors.Repository.RepositoryItemImageComboBox();
             this.repHinhThuc = new DevExpress.XtraEditors.Repository.RepositoryItemImageComboBox();
             this.repKhachHang = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
+            this.txtTile1 = new DevExpress.XtraEditors.SpinEdit();
+            this.txtTiLe2 = new DevExpress.XtraEditors.SpinEdit();
             this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.soLuotCSKHTableAdapter = new CRM.DataReportTableAdapters.SoLuotCSKHTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this._dtNhatKy)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bm)).BeginInit();
@@ -69,8 +77,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.repTrangThai)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repHinhThuc)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repKhachHang)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtTile1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtTiLe2.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).BeginInit();
             this.SuspendLayout();
             // 
             // itemDateFrom
@@ -162,14 +175,30 @@
             this.rgSpin.EditFormat.FormatString = "#,#0.##;(#,#0.##);-";
             this.rgSpin.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             // 
+            // colSoLuot
+            // 
+            this.colSoLuot.DisplayFormat.FormatString = "#,#0";
+            this.colSoLuot.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.colSoLuot.FieldName = "SoLuot";
+            this.colSoLuot.Name = "colSoLuot";
+            this.colSoLuot.OptionsFilter.AutoFilterCondition = DevExpress.XtraGrid.Columns.AutoFilterCondition.Contains;
+            this.colSoLuot.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
+            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "SoLuot", "{0:#,#0}")});
+            this.colSoLuot.Visible = true;
+            this.colSoLuot.VisibleIndex = 2;
+            this.colSoLuot.Width = 94;
+            // 
             // layoutControl1
             // 
             this.layoutControl1.Controls.Add(this.customGridControl1);
+            this.layoutControl1.Controls.Add(this.txtTile1);
+            this.layoutControl1.Controls.Add(this.txtTiLe2);
             this.layoutControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.layoutControl1.Location = new System.Drawing.Point(0, 31);
+            this.layoutControl1.Location = new System.Drawing.Point(0, 62);
             this.layoutControl1.Name = "layoutControl1";
+            this.layoutControl1.OptionsCustomizationForm.DesignTimeCustomizationFormPositionAndSize = new System.Drawing.Rectangle(316, 136, 450, 400);
             this.layoutControl1.Root = this.layoutControlGroup1;
-            this.layoutControl1.Size = new System.Drawing.Size(1220, 556);
+            this.layoutControl1.Size = new System.Drawing.Size(990, 525);
             this.layoutControl1.TabIndex = 4;
             this.layoutControl1.Text = "layoutControl1";
             // 
@@ -186,7 +215,7 @@
             this.repTrangThai,
             this.repHinhThuc,
             this.repKhachHang});
-            this.customGridControl1.Size = new System.Drawing.Size(1216, 552);
+            this.customGridControl1.Size = new System.Drawing.Size(986, 497);
             this.customGridControl1.TabIndex = 4;
             this.customGridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.customGridView1});
@@ -216,7 +245,9 @@
             this.customGridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.colNhanVien,
             this.colHoTen1,
-            this.colSoLuot});
+            this.colSoLuot,
+            this.colSoKH,
+            this.colTiLe});
             this.customGridView1.FixedLineWidth = 1;
             this.customGridView1.FormatCode = null;
             gridFormatRule1.Column = this.colSoLuot;
@@ -248,7 +279,7 @@
             this.colNhanVien.OptionsFilter.AutoFilterCondition = DevExpress.XtraGrid.Columns.AutoFilterCondition.Contains;
             this.colNhanVien.Visible = true;
             this.colNhanVien.VisibleIndex = 0;
-            this.colNhanVien.Width = 145;
+            this.colNhanVien.Width = 108;
             // 
             // colHoTen1
             // 
@@ -257,16 +288,31 @@
             this.colHoTen1.OptionsFilter.AutoFilterCondition = DevExpress.XtraGrid.Columns.AutoFilterCondition.Contains;
             this.colHoTen1.Visible = true;
             this.colHoTen1.VisibleIndex = 1;
-            this.colHoTen1.Width = 270;
+            this.colHoTen1.Width = 197;
             // 
-            // colSoLuot
+            // colSoKH
             // 
-            this.colSoLuot.FieldName = "SoLuot";
-            this.colSoLuot.Name = "colSoLuot";
-            this.colSoLuot.OptionsFilter.AutoFilterCondition = DevExpress.XtraGrid.Columns.AutoFilterCondition.Contains;
-            this.colSoLuot.Visible = true;
-            this.colSoLuot.VisibleIndex = 2;
-            this.colSoLuot.Width = 168;
+            this.colSoKH.DisplayFormat.FormatString = "#,#0";
+            this.colSoKH.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.colSoKH.FieldName = "SoKH";
+            this.colSoKH.Name = "colSoKH";
+            this.colSoKH.OptionsFilter.AutoFilterCondition = DevExpress.XtraGrid.Columns.AutoFilterCondition.Contains;
+            this.colSoKH.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
+            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "SoKH", "{0:#,#0}")});
+            this.colSoKH.Visible = true;
+            this.colSoKH.VisibleIndex = 3;
+            this.colSoKH.Width = 105;
+            // 
+            // colTiLe
+            // 
+            this.colTiLe.DisplayFormat.FormatString = "#,#0.###";
+            this.colTiLe.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.colTiLe.FieldName = "TiLe";
+            this.colTiLe.Name = "colTiLe";
+            this.colTiLe.OptionsFilter.AutoFilterCondition = DevExpress.XtraGrid.Columns.AutoFilterCondition.Contains;
+            this.colTiLe.Visible = true;
+            this.colTiLe.VisibleIndex = 4;
+            this.colTiLe.Width = 123;
             // 
             // rsearchNhanVien
             // 
@@ -354,16 +400,67 @@
             this.repKhachHang.Name = "repKhachHang";
             this.repKhachHang.ValueMember = "MaKH";
             // 
+            // txtTile1
+            // 
+            this.txtTile1.EditValue = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.txtTile1.Enabled = false;
+            this.txtTile1.Location = new System.Drawing.Point(686, 503);
+            this.txtTile1.MenuManager = this.bm;
+            this.txtTile1.Name = "txtTile1";
+            this.txtTile1.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.txtTile1.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.txtTile1.Properties.Appearance.Options.UseFont = true;
+            this.txtTile1.Properties.Appearance.Options.UseForeColor = true;
+            this.txtTile1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.txtTile1.Properties.DisplayFormat.FormatString = "#,#0.##";
+            this.txtTile1.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.txtTile1.Properties.EditValueChangedFiringMode = DevExpress.XtraEditors.Controls.EditValueChangedFiringMode.Default;
+            this.txtTile1.Size = new System.Drawing.Size(77, 20);
+            this.txtTile1.StyleController = this.layoutControl1;
+            this.txtTile1.TabIndex = 5;
+            // 
+            // txtTiLe2
+            // 
+            this.txtTiLe2.EditValue = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.txtTiLe2.Enabled = false;
+            this.txtTiLe2.Location = new System.Drawing.Point(912, 503);
+            this.txtTiLe2.MenuManager = this.bm;
+            this.txtTiLe2.Name = "txtTiLe2";
+            this.txtTiLe2.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.txtTiLe2.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.txtTiLe2.Properties.Appearance.Options.UseFont = true;
+            this.txtTiLe2.Properties.Appearance.Options.UseForeColor = true;
+            this.txtTiLe2.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.txtTiLe2.Properties.EditValueChangedFiringMode = DevExpress.XtraEditors.Controls.EditValueChangedFiringMode.Default;
+            this.txtTiLe2.Properties.Mask.EditMask = "P2";
+            this.txtTiLe2.Properties.Mask.UseMaskAsDisplayFormat = true;
+            this.txtTiLe2.Size = new System.Drawing.Size(76, 20);
+            this.txtTiLe2.StyleController = this.layoutControl1;
+            this.txtTiLe2.TabIndex = 6;
+            // 
             // layoutControlGroup1
             // 
             this.layoutControlGroup1.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
             this.layoutControlGroup1.GroupBordersVisible = false;
             this.layoutControlGroup1.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
-            this.layoutControlItem1});
+            this.layoutControlItem1,
+            this.layoutControlItem2,
+            this.layoutControlItem3,
+            this.emptySpaceItem1});
             this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
-            this.layoutControlGroup1.Name = "layoutControlGroup1";
+            this.layoutControlGroup1.Name = "Root";
             this.layoutControlGroup1.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
-            this.layoutControlGroup1.Size = new System.Drawing.Size(1220, 556);
+            this.layoutControlGroup1.Size = new System.Drawing.Size(990, 525);
             this.layoutControlGroup1.TextVisible = false;
             // 
             // layoutControlItem1
@@ -371,9 +468,35 @@
             this.layoutControlItem1.Control = this.customGridControl1;
             this.layoutControlItem1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem1.Name = "layoutControlItem1";
-            this.layoutControlItem1.Size = new System.Drawing.Size(1220, 556);
+            this.layoutControlItem1.Size = new System.Drawing.Size(990, 501);
             this.layoutControlItem1.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem1.TextVisible = false;
+            // 
+            // layoutControlItem2
+            // 
+            this.layoutControlItem2.Control = this.txtTile1;
+            this.layoutControlItem2.Location = new System.Drawing.Point(539, 501);
+            this.layoutControlItem2.Name = "layoutControlItem2";
+            this.layoutControlItem2.Size = new System.Drawing.Size(226, 24);
+            this.layoutControlItem2.Text = "Trung bình số lần chăm/Số KH";
+            this.layoutControlItem2.TextSize = new System.Drawing.Size(142, 13);
+            // 
+            // layoutControlItem3
+            // 
+            this.layoutControlItem3.Control = this.txtTiLe2;
+            this.layoutControlItem3.Location = new System.Drawing.Point(765, 501);
+            this.layoutControlItem3.Name = "layoutControlItem3";
+            this.layoutControlItem3.Size = new System.Drawing.Size(225, 24);
+            this.layoutControlItem3.Text = "Tỉ lệ KH được chăm / Tổng KH";
+            this.layoutControlItem3.TextSize = new System.Drawing.Size(142, 13);
+            // 
+            // emptySpaceItem1
+            // 
+            this.emptySpaceItem1.AllowHotTrack = false;
+            this.emptySpaceItem1.Location = new System.Drawing.Point(0, 501);
+            this.emptySpaceItem1.Name = "emptySpaceItem1";
+            this.emptySpaceItem1.Size = new System.Drawing.Size(539, 24);
+            this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
             // 
             // soLuotCSKHTableAdapter
             // 
@@ -383,12 +506,13 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1220, 587);
+            this.ClientSize = new System.Drawing.Size(990, 587);
             this.Controls.Add(this.layoutControl1);
             this.DateFrom = new System.DateTime(2018, 9, 1, 0, 0, 0, 0);
             this.DateTo = new System.DateTime(2018, 9, 30, 23, 59, 59, 0);
             this.Name = "FrmSoLuotCSKH";
             this.ReportType = Lotus.Base.ReportType.Month;
+            this.ReportTypeShowAll = false;
             this.ShowAllChiNhanh = false;
             this.Text = "Số lượt chăm sóc khách hàng";
             this.Load += new System.EventHandler(this.FrmPhapLy_Load);
@@ -410,8 +534,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.repTrangThai)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repHinhThuc)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repKhachHang)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtTile1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtTiLe2.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -440,5 +569,12 @@
         private DevExpress.XtraGrid.Columns.GridColumn colHoTen1;
         private DevExpress.XtraGrid.Columns.GridColumn colSoLuot;
         private DataReportTableAdapters.SoLuotCSKHTableAdapter soLuotCSKHTableAdapter;
+        private DevExpress.XtraGrid.Columns.GridColumn colSoKH;
+        private DevExpress.XtraGrid.Columns.GridColumn colTiLe;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem2;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem3;
+        private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem1;
+        private DevExpress.XtraEditors.SpinEdit txtTile1;
+        private DevExpress.XtraEditors.SpinEdit txtTiLe2;
     }
 }

@@ -176,6 +176,12 @@
     <Compile Include="Reports\FrmSoLanMuaTheoNhomKH.designer.cs">
       <DependentUpon>FrmSoLanMuaTheoNhomKH.cs</DependentUpon>
     </Compile>
+    <Compile Include="Reports\FrmSoKHDuocCS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\FrmSoKHDuocCS.designer.cs">
+      <DependentUpon>FrmSoKHDuocCS.cs</DependentUpon>
+    </Compile>
     <Compile Include="Reports\FrmTiLeChuyenDoiKH.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -352,6 +358,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\FrmSoLanMuaTheoNhomKH.resx">
       <DependentUpon>FrmSoLanMuaTheoNhomKH.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\FrmSoKHDuocCS.resx">
+      <DependentUpon>FrmSoKHDuocCS.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\FrmTiLeChuyenDoiKH.resx">
       <DependentUpon>FrmTiLeChuyenDoiKH.cs</DependentUpon>

@@ -1,6 +1,6 @@
 ﻿namespace CRM.Reports
 {
-    partial class FrmSoLanMuaTheoNhomKH
+    partial class FrmSoKHDuocCS
     {
         /// <summary>
         /// Required designer variable.
@@ -29,24 +29,22 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmSoLanMuaTheoNhomKH));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmSoKHDuocCS));
             DevExpress.XtraGrid.GridFormatRule gridFormatRule1 = new DevExpress.XtraGrid.GridFormatRule();
             DevExpress.XtraEditors.FormatConditionRuleDataBar formatConditionRuleDataBar1 = new DevExpress.XtraEditors.FormatConditionRuleDataBar();
-            DevExpress.XtraGrid.GridFormatRule gridFormatRule2 = new DevExpress.XtraGrid.GridFormatRule();
-            DevExpress.XtraEditors.FormatConditionRuleDataBar formatConditionRuleDataBar2 = new DevExpress.XtraEditors.FormatConditionRuleDataBar();
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
             this.customGridControl1 = new Lotus.Libraries.CustomGridControl();
-            this.soLanMuaTheoKhachHangBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.soKHCSTheoNhanVienBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataReport = new CRM.DataReport();
             this.customGridView1 = new Lotus.Libraries.CustomGridView();
-            this.colTenNhom = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colSoKH = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colSLM = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colTiLeMua = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.repositoryItemSpinEdit3 = new DevExpress.XtraEditors.Repository.RepositoryItemSpinEdit();
-            this.colSoKH2L = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colTiLeMua2Lan = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.repositoryItemSpinEdit4 = new DevExpress.XtraEditors.Repository.RepositoryItemSpinEdit();
+            this.colTenNhom = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colSLCS = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colSoKHCS = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colTiLeCS = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.repositoryItemSpinEdit2 = new DevExpress.XtraEditors.Repository.RepositoryItemSpinEdit();
+            this.colTiLeKH = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.repositoryItemSpinEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemSpinEdit();
             this.rsearchNhanVien = new DevExpress.XtraEditors.Repository.RepositoryItemSearchLookUpEdit();
             this.repositoryItemSearchLookUpEdit1View = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colMaNV = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -57,11 +55,10 @@
             this.repTrangThai = new DevExpress.XtraEditors.Repository.RepositoryItemImageComboBox();
             this.repHinhThuc = new DevExpress.XtraEditors.Repository.RepositoryItemImageComboBox();
             this.repKhachHang = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
-            this.repositoryItemSpinEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemSpinEdit();
-            this.repositoryItemSpinEdit2 = new DevExpress.XtraEditors.Repository.RepositoryItemSpinEdit();
             this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.soLanMuaTheoKhachHangTableAdapter = new CRM.DataReportTableAdapters.SoLanMuaTheoKhachHangTableAdapter();
+            this.emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
+            this.soKHCSTheoNhanVienTableAdapter = new CRM.DataReportTableAdapters.SoKHCSTheoNhanVienTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this._dtNhatKy)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bm)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rgCalc)).BeginInit();
@@ -71,20 +68,19 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.customGridControl1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.soLanMuaTheoKhachHangBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.soKHCSTheoNhanVienBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataReport)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.customGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemSpinEdit3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemSpinEdit4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemSpinEdit2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemSpinEdit1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rsearchNhanVien)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemSearchLookUpEdit1View)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repTrangThai)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repHinhThuc)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repKhachHang)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemSpinEdit1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemSpinEdit2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).BeginInit();
             this.SuspendLayout();
             // 
             // itemDateFrom
@@ -180,16 +176,17 @@
             // 
             this.layoutControl1.Controls.Add(this.customGridControl1);
             this.layoutControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.layoutControl1.Location = new System.Drawing.Point(0, 60);
+            this.layoutControl1.Location = new System.Drawing.Point(0, 62);
             this.layoutControl1.Name = "layoutControl1";
+            this.layoutControl1.OptionsCustomizationForm.DesignTimeCustomizationFormPositionAndSize = new System.Drawing.Rectangle(316, 136, 450, 400);
             this.layoutControl1.Root = this.layoutControlGroup1;
-            this.layoutControl1.Size = new System.Drawing.Size(869, 527);
+            this.layoutControl1.Size = new System.Drawing.Size(990, 525);
             this.layoutControl1.TabIndex = 4;
             this.layoutControl1.Text = "layoutControl1";
             // 
             // customGridControl1
             // 
-            this.customGridControl1.DataSource = this.soLanMuaTheoKhachHangBindingSource;
+            this.customGridControl1.DataSource = this.soKHCSTheoNhanVienBindingSource;
             this.customGridControl1.ExternalRepository = this.rgCollection;
             this.customGridControl1.Location = new System.Drawing.Point(2, 2);
             this.customGridControl1.MainView = this.customGridView1;
@@ -201,18 +198,16 @@
             this.repHinhThuc,
             this.repKhachHang,
             this.repositoryItemSpinEdit1,
-            this.repositoryItemSpinEdit2,
-            this.repositoryItemSpinEdit3,
-            this.repositoryItemSpinEdit4});
-            this.customGridControl1.Size = new System.Drawing.Size(865, 523);
+            this.repositoryItemSpinEdit2});
+            this.customGridControl1.Size = new System.Drawing.Size(986, 497);
             this.customGridControl1.TabIndex = 4;
             this.customGridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.customGridView1});
             // 
-            // soLanMuaTheoKhachHangBindingSource
+            // soKHCSTheoNhanVienBindingSource
             // 
-            this.soLanMuaTheoKhachHangBindingSource.DataMember = "SoLanMuaTheoKhachHang";
-            this.soLanMuaTheoKhachHangBindingSource.DataSource = this.dataReport;
+            this.soKHCSTheoNhanVienBindingSource.DataMember = "SoKHCSTheoNhanVien";
+            this.soKHCSTheoNhanVienBindingSource.DataSource = this.dataReport;
             // 
             // dataReport
             // 
@@ -225,8 +220,6 @@
             this.customGridView1.Appearance.FooterPanel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.customGridView1.Appearance.FooterPanel.Options.UseFont = true;
             this.customGridView1.Appearance.FooterPanel.Options.UseForeColor = true;
-            this.customGridView1.Appearance.GroupFooter.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-            this.customGridView1.Appearance.GroupFooter.Options.UseFont = true;
             this.customGridView1.Appearance.HeaderPanel.Options.UseTextOptions = true;
             this.customGridView1.Appearance.HeaderPanel.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.customGridView1.Appearance.HeaderPanel.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
@@ -234,27 +227,20 @@
             this.customGridView1.AppearancePrint.HeaderPanel.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.customGridView1.AppearancePrint.HeaderPanel.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.customGridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
-            this.colTenNhom,
             this.colSoKH,
-            this.colSLM,
-            this.colTiLeMua,
-            this.colSoKH2L,
-            this.colTiLeMua2Lan});
+            this.colTenNhom,
+            this.colSLCS,
+            this.colSoKHCS,
+            this.colTiLeCS,
+            this.colTiLeKH});
             this.customGridView1.FixedLineWidth = 1;
             this.customGridView1.FormatCode = null;
             gridFormatRule1.Name = "Format0";
             formatConditionRuleDataBar1.PredefinedName = "Blue";
             gridFormatRule1.Rule = formatConditionRuleDataBar1;
-            gridFormatRule2.Name = "Format1";
-            formatConditionRuleDataBar2.PredefinedName = "Green";
-            gridFormatRule2.Rule = formatConditionRuleDataBar2;
             this.customGridView1.FormatRules.Add(gridFormatRule1);
-            this.customGridView1.FormatRules.Add(gridFormatRule2);
             this.customGridView1.GridControl = this.customGridControl1;
             this.customGridView1.GroupFormat = "[#image]{1} {2}";
-            this.customGridView1.GroupSummary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
-            new DevExpress.XtraGrid.GridGroupSummaryItem(DevExpress.Data.SummaryItemType.Sum, "ThanhTien", null, "{0:#,#0;(#,#0);-}"),
-            new DevExpress.XtraGrid.GridGroupSummaryItem(DevExpress.Data.SummaryItemType.Sum, "TienCK", null, "{0:#,#0;(#,#0);-}")});
             this.customGridView1.IndicatorWidth = 31;
             this.customGridView1.KeyColumn = "TenBL";
             this.customGridView1.Name = "customGridView1";
@@ -269,17 +255,6 @@
             this.customGridView1.UseAutoLog = true;
             this.customGridView1.DoubleClick += new System.EventHandler(this.customGridView1_DoubleClick);
             // 
-            // colTenNhom
-            // 
-            this.colTenNhom.FieldName = "TenNhom";
-            this.colTenNhom.Name = "colTenNhom";
-            this.colTenNhom.OptionsColumn.AllowEdit = false;
-            this.colTenNhom.OptionsColumn.AllowFocus = false;
-            this.colTenNhom.OptionsFilter.AutoFilterCondition = DevExpress.XtraGrid.Columns.AutoFilterCondition.Contains;
-            this.colTenNhom.Visible = true;
-            this.colTenNhom.VisibleIndex = 0;
-            this.colTenNhom.Width = 273;
-            // 
             // colSoKH
             // 
             this.colSoKH.DisplayFormat.FormatString = "#,#0";
@@ -290,83 +265,97 @@
             this.colSoKH.OptionsColumn.AllowFocus = false;
             this.colSoKH.OptionsFilter.AutoFilterCondition = DevExpress.XtraGrid.Columns.AutoFilterCondition.Contains;
             this.colSoKH.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
-            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "SoKH", "{0:#,#0}")});
+            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "SoKH", "{0:0.##}")});
             this.colSoKH.Visible = true;
             this.colSoKH.VisibleIndex = 1;
-            this.colSoKH.Width = 111;
+            this.colSoKH.Width = 123;
             // 
-            // colSLM
+            // colTenNhom
             // 
-            this.colSLM.DisplayFormat.FormatString = "#,#0";
-            this.colSLM.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.colSLM.FieldName = "SLM";
-            this.colSLM.Name = "colSLM";
-            this.colSLM.OptionsColumn.AllowEdit = false;
-            this.colSLM.OptionsColumn.AllowFocus = false;
-            this.colSLM.OptionsFilter.AutoFilterCondition = DevExpress.XtraGrid.Columns.AutoFilterCondition.Contains;
-            this.colSLM.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
-            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "SLM", "{0:#,#0}")});
-            this.colSLM.Visible = true;
-            this.colSLM.VisibleIndex = 2;
-            this.colSLM.Width = 79;
+            this.colTenNhom.FieldName = "TenNhom";
+            this.colTenNhom.Name = "colTenNhom";
+            this.colTenNhom.OptionsColumn.AllowEdit = false;
+            this.colTenNhom.OptionsColumn.AllowFocus = false;
+            this.colTenNhom.OptionsFilter.AutoFilterCondition = DevExpress.XtraGrid.Columns.AutoFilterCondition.Contains;
+            this.colTenNhom.Visible = true;
+            this.colTenNhom.VisibleIndex = 0;
+            this.colTenNhom.Width = 206;
             // 
-            // colTiLeMua
+            // colSLCS
             // 
-            this.colTiLeMua.ColumnEdit = this.repositoryItemSpinEdit3;
-            this.colTiLeMua.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.colTiLeMua.FieldName = "TiLeMua";
-            this.colTiLeMua.Name = "colTiLeMua";
-            this.colTiLeMua.OptionsColumn.AllowEdit = false;
-            this.colTiLeMua.OptionsColumn.AllowFocus = false;
-            this.colTiLeMua.OptionsFilter.AutoFilterCondition = DevExpress.XtraGrid.Columns.AutoFilterCondition.Contains;
-            this.colTiLeMua.Visible = true;
-            this.colTiLeMua.VisibleIndex = 3;
-            this.colTiLeMua.Width = 127;
+            this.colSLCS.DisplayFormat.FormatString = "#,#0";
+            this.colSLCS.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.colSLCS.FieldName = "SLCS";
+            this.colSLCS.Name = "colSLCS";
+            this.colSLCS.OptionsColumn.AllowEdit = false;
+            this.colSLCS.OptionsColumn.AllowFocus = false;
+            this.colSLCS.OptionsFilter.AutoFilterCondition = DevExpress.XtraGrid.Columns.AutoFilterCondition.Contains;
+            this.colSLCS.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
+            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "SLCS", "{0:#,#0}")});
+            this.colSLCS.Visible = true;
+            this.colSLCS.VisibleIndex = 4;
+            this.colSLCS.Width = 132;
             // 
-            // repositoryItemSpinEdit3
+            // colSoKHCS
             // 
-            this.repositoryItemSpinEdit3.AutoHeight = false;
-            this.repositoryItemSpinEdit3.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.colSoKHCS.DisplayFormat.FormatString = "#,#0";
+            this.colSoKHCS.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.colSoKHCS.FieldName = "SoKHCS";
+            this.colSoKHCS.Name = "colSoKHCS";
+            this.colSoKHCS.OptionsColumn.AllowEdit = false;
+            this.colSoKHCS.OptionsColumn.AllowFocus = false;
+            this.colSoKHCS.OptionsFilter.AutoFilterCondition = DevExpress.XtraGrid.Columns.AutoFilterCondition.Contains;
+            this.colSoKHCS.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
+            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "SoKHCS", "{0:#,#0}")});
+            this.colSoKHCS.Visible = true;
+            this.colSoKHCS.VisibleIndex = 2;
+            this.colSoKHCS.Width = 123;
+            // 
+            // colTiLeCS
+            // 
+            this.colTiLeCS.ColumnEdit = this.repositoryItemSpinEdit2;
+            this.colTiLeCS.DisplayFormat.FormatString = "#,#0.##";
+            this.colTiLeCS.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.colTiLeCS.FieldName = "TiLeCS";
+            this.colTiLeCS.Name = "colTiLeCS";
+            this.colTiLeCS.OptionsColumn.AllowEdit = false;
+            this.colTiLeCS.OptionsColumn.AllowFocus = false;
+            this.colTiLeCS.OptionsFilter.AutoFilterCondition = DevExpress.XtraGrid.Columns.AutoFilterCondition.Contains;
+            this.colTiLeCS.Visible = true;
+            this.colTiLeCS.VisibleIndex = 3;
+            this.colTiLeCS.Width = 84;
+            // 
+            // repositoryItemSpinEdit2
+            // 
+            this.repositoryItemSpinEdit2.AutoHeight = false;
+            this.repositoryItemSpinEdit2.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.repositoryItemSpinEdit3.Mask.EditMask = "P2";
-            this.repositoryItemSpinEdit3.Mask.UseMaskAsDisplayFormat = true;
-            this.repositoryItemSpinEdit3.Name = "repositoryItemSpinEdit3";
+            this.repositoryItemSpinEdit2.Mask.EditMask = "P2";
+            this.repositoryItemSpinEdit2.Mask.UseMaskAsDisplayFormat = true;
+            this.repositoryItemSpinEdit2.Name = "repositoryItemSpinEdit2";
             // 
-            // colSoKH2L
+            // colTiLeKH
             // 
-            this.colSoKH2L.DisplayFormat.FormatString = "#,#0";
-            this.colSoKH2L.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.colSoKH2L.FieldName = "SoKH2L";
-            this.colSoKH2L.Name = "colSoKH2L";
-            this.colSoKH2L.OptionsColumn.AllowEdit = false;
-            this.colSoKH2L.OptionsColumn.AllowFocus = false;
-            this.colSoKH2L.OptionsFilter.AutoFilterCondition = DevExpress.XtraGrid.Columns.AutoFilterCondition.Contains;
-            this.colSoKH2L.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
-            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "SoKH2L", "{0:#,#0}")});
-            this.colSoKH2L.Visible = true;
-            this.colSoKH2L.VisibleIndex = 4;
-            this.colSoKH2L.Width = 134;
+            this.colTiLeKH.ColumnEdit = this.repositoryItemSpinEdit1;
+            this.colTiLeKH.DisplayFormat.FormatString = "#,#0.##";
+            this.colTiLeKH.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.colTiLeKH.FieldName = "TiLeKH";
+            this.colTiLeKH.Name = "colTiLeKH";
+            this.colTiLeKH.OptionsColumn.AllowEdit = false;
+            this.colTiLeKH.OptionsColumn.AllowFocus = false;
+            this.colTiLeKH.OptionsFilter.AutoFilterCondition = DevExpress.XtraGrid.Columns.AutoFilterCondition.Contains;
+            this.colTiLeKH.Visible = true;
+            this.colTiLeKH.VisibleIndex = 5;
+            this.colTiLeKH.Width = 110;
             // 
-            // colTiLeMua2Lan
+            // repositoryItemSpinEdit1
             // 
-            this.colTiLeMua2Lan.ColumnEdit = this.repositoryItemSpinEdit4;
-            this.colTiLeMua2Lan.FieldName = "TiLeMua2Lan";
-            this.colTiLeMua2Lan.Name = "colTiLeMua2Lan";
-            this.colTiLeMua2Lan.OptionsColumn.AllowEdit = false;
-            this.colTiLeMua2Lan.OptionsColumn.AllowFocus = false;
-            this.colTiLeMua2Lan.OptionsFilter.AutoFilterCondition = DevExpress.XtraGrid.Columns.AutoFilterCondition.Contains;
-            this.colTiLeMua2Lan.Visible = true;
-            this.colTiLeMua2Lan.VisibleIndex = 5;
-            this.colTiLeMua2Lan.Width = 201;
-            // 
-            // repositoryItemSpinEdit4
-            // 
-            this.repositoryItemSpinEdit4.AutoHeight = false;
-            this.repositoryItemSpinEdit4.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.repositoryItemSpinEdit1.AutoHeight = false;
+            this.repositoryItemSpinEdit1.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.repositoryItemSpinEdit4.Mask.EditMask = "P2";
-            this.repositoryItemSpinEdit4.Mask.UseMaskAsDisplayFormat = true;
-            this.repositoryItemSpinEdit4.Name = "repositoryItemSpinEdit4";
+            this.repositoryItemSpinEdit1.Mask.EditMask = "P2";
+            this.repositoryItemSpinEdit1.Mask.UseMaskAsDisplayFormat = true;
+            this.repositoryItemSpinEdit1.Name = "repositoryItemSpinEdit1";
             // 
             // rsearchNhanVien
             // 
@@ -454,34 +443,17 @@
             this.repKhachHang.Name = "repKhachHang";
             this.repKhachHang.ValueMember = "MaKH";
             // 
-            // repositoryItemSpinEdit1
-            // 
-            this.repositoryItemSpinEdit1.AutoHeight = false;
-            this.repositoryItemSpinEdit1.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.repositoryItemSpinEdit1.Mask.EditMask = "P1";
-            this.repositoryItemSpinEdit1.Mask.UseMaskAsDisplayFormat = true;
-            this.repositoryItemSpinEdit1.Name = "repositoryItemSpinEdit1";
-            // 
-            // repositoryItemSpinEdit2
-            // 
-            this.repositoryItemSpinEdit2.AutoHeight = false;
-            this.repositoryItemSpinEdit2.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.repositoryItemSpinEdit2.Mask.EditMask = "P1";
-            this.repositoryItemSpinEdit2.Mask.UseMaskAsDisplayFormat = true;
-            this.repositoryItemSpinEdit2.Name = "repositoryItemSpinEdit2";
-            // 
             // layoutControlGroup1
             // 
             this.layoutControlGroup1.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
             this.layoutControlGroup1.GroupBordersVisible = false;
             this.layoutControlGroup1.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
-            this.layoutControlItem1});
+            this.layoutControlItem1,
+            this.emptySpaceItem1});
             this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
-            this.layoutControlGroup1.Name = "layoutControlGroup1";
+            this.layoutControlGroup1.Name = "Root";
             this.layoutControlGroup1.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
-            this.layoutControlGroup1.Size = new System.Drawing.Size(869, 527);
+            this.layoutControlGroup1.Size = new System.Drawing.Size(990, 525);
             this.layoutControlGroup1.TextVisible = false;
             // 
             // layoutControlItem1
@@ -489,26 +461,35 @@
             this.layoutControlItem1.Control = this.customGridControl1;
             this.layoutControlItem1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem1.Name = "layoutControlItem1";
-            this.layoutControlItem1.Size = new System.Drawing.Size(869, 527);
+            this.layoutControlItem1.Size = new System.Drawing.Size(990, 501);
             this.layoutControlItem1.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem1.TextVisible = false;
             // 
-            // soLanMuaTheoKhachHangTableAdapter
+            // emptySpaceItem1
             // 
-            this.soLanMuaTheoKhachHangTableAdapter.ClearBeforeFill = true;
+            this.emptySpaceItem1.AllowHotTrack = false;
+            this.emptySpaceItem1.Location = new System.Drawing.Point(0, 501);
+            this.emptySpaceItem1.Name = "emptySpaceItem1";
+            this.emptySpaceItem1.Size = new System.Drawing.Size(990, 24);
+            this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
             // 
-            // FrmSoLanMuaTheoNhomKH
+            // soKHCSTheoNhanVienTableAdapter
+            // 
+            this.soKHCSTheoNhanVienTableAdapter.ClearBeforeFill = true;
+            // 
+            // FrmSoKHDuocCS
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(869, 587);
+            this.ClientSize = new System.Drawing.Size(990, 587);
             this.Controls.Add(this.layoutControl1);
             this.DateFrom = new System.DateTime(2018, 9, 1, 0, 0, 0, 0);
             this.DateTo = new System.DateTime(2018, 9, 30, 23, 59, 59, 0);
-            this.Name = "FrmSoLanMuaTheoNhomKH";
+            this.Name = "FrmSoKHDuocCS";
             this.ReportType = Lotus.Base.ReportType.Month;
             this.ReportTypeShowAll = false;
-            this.Text = "Số lần mua theo nhóm khách hàng";
+            this.ShowAllChiNhanh = false;
+            this.Text = "Số lượt chăm sóc khách hàng";
             this.Load += new System.EventHandler(this.FrmPhapLy_Load);
             this.Controls.SetChildIndex(this.layoutControl1, 0);
             ((System.ComponentModel.ISupportInitialize)(this._dtNhatKy)).EndInit();
@@ -520,20 +501,19 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.customGridControl1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.soLanMuaTheoKhachHangBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.soKHCSTheoNhanVienBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataReport)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.customGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemSpinEdit3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemSpinEdit4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemSpinEdit2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemSpinEdit1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.rsearchNhanVien)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemSearchLookUpEdit1View)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repTrangThai)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repHinhThuc)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repKhachHang)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemSpinEdit1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemSpinEdit2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -557,17 +537,16 @@
         private DevExpress.XtraEditors.Repository.RepositoryItemImageComboBox repHinhThuc;
         private DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit repKhachHang;
         private DataReport dataReport;
-        private DevExpress.XtraEditors.Repository.RepositoryItemSpinEdit repositoryItemSpinEdit1;
-        private DevExpress.XtraGrid.Columns.GridColumn colTenNhom;
-        private System.Windows.Forms.BindingSource soLanMuaTheoKhachHangBindingSource;
-        private DataReportTableAdapters.SoLanMuaTheoKhachHangTableAdapter soLanMuaTheoKhachHangTableAdapter;
-        private DevExpress.XtraEditors.Repository.RepositoryItemSpinEdit repositoryItemSpinEdit2;
+        private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem1;
+        private System.Windows.Forms.BindingSource soKHCSTheoNhanVienBindingSource;
         private DevExpress.XtraGrid.Columns.GridColumn colSoKH;
-        private DevExpress.XtraGrid.Columns.GridColumn colSLM;
-        private DevExpress.XtraGrid.Columns.GridColumn colTiLeMua;
-        private DevExpress.XtraGrid.Columns.GridColumn colSoKH2L;
-        private DevExpress.XtraGrid.Columns.GridColumn colTiLeMua2Lan;
-        private DevExpress.XtraEditors.Repository.RepositoryItemSpinEdit repositoryItemSpinEdit3;
-        private DevExpress.XtraEditors.Repository.RepositoryItemSpinEdit repositoryItemSpinEdit4;
+        private DevExpress.XtraGrid.Columns.GridColumn colTenNhom;
+        private DevExpress.XtraGrid.Columns.GridColumn colSLCS;
+        private DevExpress.XtraGrid.Columns.GridColumn colSoKHCS;
+        private DevExpress.XtraGrid.Columns.GridColumn colTiLeCS;
+        private DevExpress.XtraGrid.Columns.GridColumn colTiLeKH;
+        private DataReportTableAdapters.SoKHCSTheoNhanVienTableAdapter soKHCSTheoNhanVienTableAdapter;
+        private DevExpress.XtraEditors.Repository.RepositoryItemSpinEdit repositoryItemSpinEdit2;
+        private DevExpress.XtraEditors.Repository.RepositoryItemSpinEdit repositoryItemSpinEdit1;
     }
 }

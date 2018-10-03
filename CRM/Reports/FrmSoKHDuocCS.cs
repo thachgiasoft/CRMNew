@@ -12,9 +12,9 @@ using DevExpress.XtraGrid;
 using CRM;
 namespace CRM.Reports
 {
-    public partial class FrmSoLuotCSKH : FrmBaseReport
+    public partial class FrmSoKHDuocCS : FrmBaseReport
     {
-        public FrmSoLuotCSKH()
+        public FrmSoKHDuocCS()
         {
             InitializeComponent();
             Printable = customGridControl1;
@@ -44,18 +44,8 @@ namespace CRM.Reports
         protected override void OnReload()
         {
             base.OnReload();
-            txtTile1.EditValue =
-            txtTiLe2.EditValue = null;
 
-            soLuotCSKHTableAdapter.Fill(dataReport.SoLuotCSKH, DateFrom, DateTo);
-            var ThongKeAD = new DataReportTableAdapters.ThongKeTongTableAdapter();
-            var data = ThongKeAD.GetData(DateFrom, DateTo);
-            var t = data.FirstOrDefault();
-            if(t!=null)
-            {
-                txtTile1.EditValue = t.TiLe1;
-                txtTiLe2.EditValue = t.TiLe2;
-            }
+            soKHCSTheoNhanVienTableAdapter.Fill(dataReport.SoKHCSTheoNhanVien, DateFrom, DateTo);
 
         }
        

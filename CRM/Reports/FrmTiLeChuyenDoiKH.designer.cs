@@ -176,6 +176,8 @@
             this.colSoDH.FieldName = "SoDH";
             this.colSoDH.Name = "colSoDH";
             this.colSoDH.OptionsFilter.AutoFilterCondition = DevExpress.XtraGrid.Columns.AutoFilterCondition.Contains;
+            this.colSoDH.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
+            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "SoDH", "{0:#,#0}")});
             this.colSoDH.Visible = true;
             this.colSoDH.VisibleIndex = 2;
             this.colSoDH.Width = 122;
@@ -187,6 +189,8 @@
             this.colSoLanTV.FieldName = "SoLanTV";
             this.colSoLanTV.Name = "colSoLanTV";
             this.colSoLanTV.OptionsFilter.AutoFilterCondition = DevExpress.XtraGrid.Columns.AutoFilterCondition.Contains;
+            this.colSoLanTV.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
+            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "SoLanTV", "{0:#,#0}")});
             this.colSoLanTV.Visible = true;
             this.colSoLanTV.VisibleIndex = 3;
             this.colSoLanTV.Width = 110;
@@ -437,6 +441,7 @@
             this.DateTo = new System.DateTime(2018, 9, 30, 23, 59, 59, 0);
             this.Name = "FrmTiLeChuyenDoiKH";
             this.ReportType = Lotus.Base.ReportType.Month;
+            this.ReportTypeShowAll = false;
             this.ShowAllChiNhanh = false;
             this.Text = "Tỉ lệ chuyển đổi khách hàng";
             this.Load += new System.EventHandler(this.FrmPhapLy_Load);

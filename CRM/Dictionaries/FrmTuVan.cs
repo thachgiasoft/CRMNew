@@ -354,7 +354,8 @@ namespace CRM.Dictionaries
 
                 var t2 = data.TuVan.NewTuVanRow();
                 t2.ID = Guid.NewGuid().ToString();
-                t2.NhanVien = f.NVChon;
+                t2.NhanVien = t.NhanVien;
+                t2.NVCS = f.NVChon;
                 t2.NoiDung = string.Format("{0} chuyển từ {1} sang {2}: {3}", HeThong.NguoiDungDangNhap.TenDangNhap, t.NhanVien, f.NVChon, t.NoiDung);
                 t2.NgayTao = t.NgayTao;
                 t2.NgayHen = t.NgayHen;
