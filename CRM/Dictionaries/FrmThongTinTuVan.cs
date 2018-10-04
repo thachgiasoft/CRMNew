@@ -103,7 +103,10 @@ namespace CRM.Dictionaries
             if (dt1 != null)
             {
                 foreach (var t in dt1)
-                    t.NgayCapNhat = DateTime.Now;
+                {
+                    if (t.RowState != DataRowState.Deleted)
+                        t.NgayCapNhat = DateTime.Now;
+                }
 
                 tuVanTableAdapter.Update(dt1);
                 data.TuVan.AcceptChanges();
@@ -277,9 +280,14 @@ namespace CRM.Dictionaries
                 {
                     if (MsgBox.ShowYesNoDialog("Lịch hẹn đã hoàn thành! Bạn có muốn tạo lịch hẹn tiếp theo cho khách hàng này?") == DialogResult.Yes)
                     {
+
+                   
+
                         var t2 = data.TuVan.NewTuVanRow();
+
                         t2.ID = Guid.NewGuid().ToString();
                         t2.NhanVien = t.NhanVien;
+                        t2.NVCS = t.NVCS;
                         t2.NgayTao = DateTime.Now;
                         t2.KhachHang = t.KhachHang;
                         t2.HinhThuc = (int)HinhThucLienLac.GoiDi;
@@ -287,7 +295,8 @@ namespace CRM.Dictionaries
 
                         if (t.IsSoPhieuDatNull())
                         {
-                            t2.NoiDung = string.Format("Gọi lại tư vấn cho khách hàng tiềm năng");
+                            //t2.NoiDung = string.Format("[{0}]- Gọi lại tư vấn cho khách hàng tiềm năng", t.NoiDung);
+                            t2.NoiDung = string.Format("[{0}]", t.NoiDung);
                             int soNgay = Convert.ToInt32(Param.GetValue<string>("Số ngày hẹn cho KH tiềm năng", "Tham số ngày hẹn", "10"));
                             var ngayhen = Utils.TinhNgay(DateTime.Today, soNgay);
                             t2.NgayHen = new DateTime(ngayhen.Year, ngayhen.Month, ngayhen.Day, 9, 0, 0);
@@ -303,14 +312,15 @@ namespace CRM.Dictionaries
 
                             if (isNew)
                             {
-                                t2.NoiDung = string.Format("Gọi lại chăm sóc khách hàng theo đơn hàng số [{0}]", t.SoPhieuDat);
+                                //t2.NoiDung = string.Format("[{1}]- Gọi lại chăm sóc khách hàng theo đơn hàng số [{0}]", t.SoPhieuDat, t.NoiDung);
+                                t2.NoiDung = string.Format("[{1}]- Gọi lại chăm sóc khách hàng theo đơn hàng số [{0}]", t.SoPhieuDat, t.NoiDung);
                                 int soNgay = Convert.ToInt32(Param.GetValue<string>("Số ngày hẹn tiếp theo cho KH thường xuyên", "Tham số ngày hẹn", "30"));
                                 var ngayhen = Utils.TinhNgay(DateTime.Today, soNgay);
                                 t2.NgayHen = new DateTime(ngayhen.Year, ngayhen.Month, ngayhen.Day, 9, 0, 0);
                             }
                             else
                             {
-                                t2.NoiDung = string.Format("Gọi hỏi cảm nhận của khách hàng theo đơn hàng số [{0}]", t.SoPhieuDat);
+                                t2.NoiDung = string.Format("[{1}]- Gọi hỏi cảm nhận của khách hàng theo đơn hàng số [{0}]", t.SoPhieuDat, t.NoiDung);
                                 int soNgay = Convert.ToInt32(Param.GetValue<string>("Số ngày hẹn tiếp theo cho KH lần đầu", "Tham số ngày hẹn", "10"));
                                 var ngayhen = Utils.TinhNgay(DateTime.Today, soNgay);
                                 t2.NgayHen = new DateTime(ngayhen.Year, ngayhen.Month, ngayhen.Day, 9, 0, 0);
@@ -319,16 +329,18 @@ namespace CRM.Dictionaries
                             t2.SoPhieuDat = t.SoPhieuDat;
                             t2.Loai="CSKH";
                         }
-
+                        data.TuVan.RemoveTuVanRow(t);
                         data.TuVan.AddTuVanRow(t2);
 
-                        data.TuVan.RemoveTuVanRow(t);
+                       
 
-                        lookUpEdit1.EditValue = t2.Loai;
-                        NgayTaoDateEdit.DateTime = t2.NgayTao;
-                        NgayHenDateEdit.DateTime = t2.NgayHen;
-                        txtGhiChu.Text = t2.GhiChu;
-                        NoiDungMemoEdit.Text = t2.NoiDung;
+                        //lookUpEdit1.EditValue = t2.Loai;
+                        //NgayTaoDateEdit.DateTime = t2.NgayTao;
+                        //NgayHenDateEdit.DateTime = t2.NgayHen;
+                        //txtGhiChu.Text = t2.GhiChu;
+                        //NoiDungMemoEdit.Text = t2.NoiDung;
+                        //lkeNVCS.EditValue = t2.NVCS;
+
 
                         //if (LuuPhieu())
                         //{

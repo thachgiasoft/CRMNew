@@ -30,13 +30,14 @@ namespace Lotus.Base.Systems
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             DevExpress.XtraTreeList.StyleFormatConditions.TreeListFormatRule treeListFormatRule1 = new DevExpress.XtraTreeList.StyleFormatConditions.TreeListFormatRule();
             DevExpress.XtraEditors.FormatConditionRuleExpression formatConditionRuleExpression1 = new DevExpress.XtraEditors.FormatConditionRuleExpression();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmPhanQuyen));
             this.colTenChucNang = new DevExpress.XtraTreeList.Columns.TreeListColumn();
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
             this.gridNguoiDung = new Lotus.Libraries.CustomGridControl();
-            this.nguoiDungBindingSource = new System.Windows.Forms.BindingSource();
+            this.nguoiDungBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dATA = new Lotus.Base.DATA();
             this.gvNguoiDung = new Lotus.Libraries.CustomGridView();
             this.colTenDangNhap = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -45,7 +46,7 @@ namespace Lotus.Base.Systems
             this.repChucDanh = new DevExpress.XtraEditors.Repository.RepositoryItemImageComboBox();
             this.colPhong = new DevExpress.XtraGrid.Columns.GridColumn();
             this.replkePhong = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
-            this.phongBanBindingSource = new System.Windows.Forms.BindingSource();
+            this.phongBanBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.rsearchNhanVien = new DevExpress.XtraEditors.Repository.RepositoryItemSearchLookUpEdit();
             this.repositoryItemSearchLookUpEdit1View = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colMaNhanVien = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -56,7 +57,7 @@ namespace Lotus.Base.Systems
             this.colSua = new DevExpress.XtraTreeList.Columns.TreeListColumn();
             this.colXoa = new DevExpress.XtraTreeList.Columns.TreeListColumn();
             this.colTatCa = new DevExpress.XtraTreeList.Columns.TreeListColumn();
-            this.imgTreeChucNang = new DevExpress.Utils.ImageCollection();
+            this.imgTreeChucNang = new DevExpress.Utils.ImageCollection(this.components);
             this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlGroup4 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
@@ -64,8 +65,8 @@ namespace Lotus.Base.Systems
             this.layoutControlGroup3 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
             this.splitterItem2 = new DevExpress.XtraLayout.SplitterItem();
-            this.chiNhanhBindingSource = new System.Windows.Forms.BindingSource();
-            this.phuongBindingSource = new System.Windows.Forms.BindingSource();
+            this.chiNhanhBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.phuongBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.nguoiDungTableAdapter = new Lotus.Base.DATATableAdapters.NguoiDungTableAdapter();
             this.chucNangAD = new Lotus.Base.DATATableAdapters.ChucNangTableAdapter();
             this.phanQuyenAD = new Lotus.Base.DATATableAdapters.PhanQuyenTableAdapter();
@@ -259,7 +260,6 @@ namespace Lotus.Base.Systems
             this.gvNguoiDung.ShowIndexIndicator = true;
             this.gvNguoiDung.UseAutoCode = false;
             this.gvNguoiDung.UseAutoLog = true;
-            this.gvNguoiDung.PopupMenuShowing += new DevExpress.XtraGrid.Views.Grid.PopupMenuShowingEventHandler(this.gvNguoiDung_PopupMenuShowing);
             this.gvNguoiDung.FocusedRowChanged += new DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventHandler(this.gvNguoiDung_FocusedRowChanged);
             this.gvNguoiDung.DoubleClick += new System.EventHandler(this.gvNguoiDung_DoubleClick);
             // 

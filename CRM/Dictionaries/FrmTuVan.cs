@@ -221,9 +221,12 @@ namespace CRM.Dictionaries
                 var dt = data.TuVan.GetChanges() as CRMData.TuVanDataTable;
                 if (dt != null)
                 {
-                    foreach (var t in dt)
-                        t.NgayCapNhat = DateTime.Now;
 
+                    foreach (var t in dt)
+                    {
+                        if (t.RowState != DataRowState.Deleted)
+                            t.NgayCapNhat = DateTime.Now;
+                    }
                     tuVanTableAdapter.Update(dt);
                     data.TuVan.AcceptChanges();
                 }
