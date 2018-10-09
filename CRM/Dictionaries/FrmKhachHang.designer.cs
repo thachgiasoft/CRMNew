@@ -72,6 +72,7 @@
             this.khachHangTableAdapter = new CRM.CRMDataTableAdapters.KhachHangTableAdapter();
             this.nhomKHTableAdapter = new CRM.CRMDataTableAdapters.NhomKHTableAdapter();
             this.tinhThanhTableAdapter = new CRM.CRMDataTableAdapters.TinhThanhTableAdapter();
+            this.btnTransfer = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this._dtNhatKy)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bm)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rgCalc)).BeginInit();
@@ -95,6 +96,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
             this.SuspendLayout();
+            // 
+            // bm
+            // 
+            this.bm.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
+            this.btnTransfer});
+            this.bm.MaxItemId = 10;
             // 
             // btnClose
             // 
@@ -153,6 +160,7 @@
             new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.btnEdit, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
             new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.btnDelete, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
             new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.btnSave, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
+            new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.btnTransfer, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
             new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.btnClose, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
             new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.btnPrintPreview, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph)});
             this.bar1.OptionsBar.AllowQuickCustomization = false;
@@ -249,6 +257,8 @@
             this.customGridView1.OptionsBehavior.AutoExpandAllGroups = true;
             this.customGridView1.OptionsDetail.EnableMasterViewMode = false;
             this.customGridView1.OptionsFind.FindMode = DevExpress.XtraEditors.FindMode.Always;
+            this.customGridView1.OptionsSelection.CheckBoxSelectorColumnWidth = 30;
+            this.customGridView1.OptionsSelection.MultiSelectMode = DevExpress.XtraGrid.Views.Grid.GridMultiSelectMode.CheckBoxRowSelect;
             this.customGridView1.OptionsView.NewItemRowPosition = DevExpress.XtraGrid.Views.Grid.NewItemRowPosition.None;
             this.customGridView1.ShowIndexIndicator = true;
             this.customGridView1.UseAutoCode = false;
@@ -263,7 +273,7 @@
             this.colMaKH.OptionsColumn.AllowEdit = false;
             this.colMaKH.OptionsFilter.AutoFilterCondition = DevExpress.XtraGrid.Columns.AutoFilterCondition.Contains;
             this.colMaKH.Visible = true;
-            this.colMaKH.VisibleIndex = 0;
+            this.colMaKH.VisibleIndex = 1;
             this.colMaKH.Width = 85;
             // 
             // colTenKH
@@ -274,7 +284,7 @@
             this.colTenKH.OptionsColumn.AllowEdit = false;
             this.colTenKH.OptionsFilter.AutoFilterCondition = DevExpress.XtraGrid.Columns.AutoFilterCondition.Contains;
             this.colTenKH.Visible = true;
-            this.colTenKH.VisibleIndex = 1;
+            this.colTenKH.VisibleIndex = 2;
             this.colTenKH.Width = 216;
             // 
             // colEmail
@@ -284,7 +294,7 @@
             this.colEmail.OptionsColumn.AllowEdit = false;
             this.colEmail.OptionsFilter.AutoFilterCondition = DevExpress.XtraGrid.Columns.AutoFilterCondition.Contains;
             this.colEmail.Visible = true;
-            this.colEmail.VisibleIndex = 5;
+            this.colEmail.VisibleIndex = 6;
             this.colEmail.Width = 108;
             // 
             // colDiaChi
@@ -294,7 +304,7 @@
             this.colDiaChi.OptionsColumn.AllowEdit = false;
             this.colDiaChi.OptionsFilter.AutoFilterCondition = DevExpress.XtraGrid.Columns.AutoFilterCondition.Contains;
             this.colDiaChi.Visible = true;
-            this.colDiaChi.VisibleIndex = 3;
+            this.colDiaChi.VisibleIndex = 4;
             this.colDiaChi.Width = 241;
             // 
             // colTinhThanh
@@ -305,7 +315,7 @@
             this.colTinhThanh.OptionsColumn.AllowEdit = false;
             this.colTinhThanh.OptionsFilter.AutoFilterCondition = DevExpress.XtraGrid.Columns.AutoFilterCondition.Contains;
             this.colTinhThanh.Visible = true;
-            this.colTinhThanh.VisibleIndex = 6;
+            this.colTinhThanh.VisibleIndex = 7;
             this.colTinhThanh.Width = 102;
             // 
             // replkeTinhThanh
@@ -330,7 +340,7 @@
             this.colSoDT.OptionsColumn.AllowEdit = false;
             this.colSoDT.OptionsFilter.AutoFilterCondition = DevExpress.XtraGrid.Columns.AutoFilterCondition.Contains;
             this.colSoDT.Visible = true;
-            this.colSoDT.VisibleIndex = 4;
+            this.colSoDT.VisibleIndex = 5;
             this.colSoDT.Width = 123;
             // 
             // colCreatedDate
@@ -344,7 +354,7 @@
             this.colCreatedDate.OptionsColumn.AllowEdit = false;
             this.colCreatedDate.OptionsFilter.AutoFilterCondition = DevExpress.XtraGrid.Columns.AutoFilterCondition.Contains;
             this.colCreatedDate.Visible = true;
-            this.colCreatedDate.VisibleIndex = 16;
+            this.colCreatedDate.VisibleIndex = 17;
             this.colCreatedDate.Width = 100;
             // 
             // colNhomKH
@@ -355,7 +365,7 @@
             this.colNhomKH.OptionsColumn.AllowEdit = false;
             this.colNhomKH.OptionsFilter.AutoFilterCondition = DevExpress.XtraGrid.Columns.AutoFilterCondition.Contains;
             this.colNhomKH.Visible = true;
-            this.colNhomKH.VisibleIndex = 8;
+            this.colNhomKH.VisibleIndex = 9;
             this.colNhomKH.Width = 131;
             // 
             // replkeNhomKH
@@ -380,7 +390,7 @@
             this.colSoCMT.OptionsColumn.AllowEdit = false;
             this.colSoCMT.OptionsFilter.AutoFilterCondition = DevExpress.XtraGrid.Columns.AutoFilterCondition.Contains;
             this.colSoCMT.Visible = true;
-            this.colSoCMT.VisibleIndex = 9;
+            this.colSoCMT.VisibleIndex = 10;
             this.colSoCMT.Width = 90;
             // 
             // colAnh
@@ -390,7 +400,7 @@
             this.colAnh.OptionsColumn.AllowEdit = false;
             this.colAnh.OptionsFilter.AutoFilterCondition = DevExpress.XtraGrid.Columns.AutoFilterCondition.Contains;
             this.colAnh.Visible = true;
-            this.colAnh.VisibleIndex = 15;
+            this.colAnh.VisibleIndex = 16;
             // 
             // colNgheNghiep
             // 
@@ -399,7 +409,7 @@
             this.colNgheNghiep.OptionsColumn.AllowEdit = false;
             this.colNgheNghiep.OptionsFilter.AutoFilterCondition = DevExpress.XtraGrid.Columns.AutoFilterCondition.Contains;
             this.colNgheNghiep.Visible = true;
-            this.colNgheNghiep.VisibleIndex = 12;
+            this.colNgheNghiep.VisibleIndex = 13;
             // 
             // colGioiTinh
             // 
@@ -409,7 +419,7 @@
             this.colGioiTinh.OptionsColumn.AllowEdit = false;
             this.colGioiTinh.OptionsFilter.AutoFilterCondition = DevExpress.XtraGrid.Columns.AutoFilterCondition.Contains;
             this.colGioiTinh.Visible = true;
-            this.colGioiTinh.VisibleIndex = 7;
+            this.colGioiTinh.VisibleIndex = 8;
             // 
             // repcboGioiTinh
             // 
@@ -439,7 +449,7 @@
             this.colNgaySinh.OptionsColumn.AllowEdit = false;
             this.colNgaySinh.OptionsFilter.AutoFilterCondition = DevExpress.XtraGrid.Columns.AutoFilterCondition.Contains;
             this.colNgaySinh.Visible = true;
-            this.colNgaySinh.VisibleIndex = 2;
+            this.colNgaySinh.VisibleIndex = 3;
             this.colNgaySinh.Width = 101;
             // 
             // colNVBH
@@ -449,7 +459,7 @@
             this.colNVBH.OptionsColumn.AllowEdit = false;
             this.colNVBH.OptionsFilter.AutoFilterCondition = DevExpress.XtraGrid.Columns.AutoFilterCondition.Contains;
             this.colNVBH.Visible = true;
-            this.colNVBH.VisibleIndex = 17;
+            this.colNVBH.VisibleIndex = 18;
             this.colNVBH.Width = 108;
             // 
             // colMucDichSuDung
@@ -459,7 +469,7 @@
             this.colMucDichSuDung.OptionsColumn.AllowEdit = false;
             this.colMucDichSuDung.OptionsFilter.AutoFilterCondition = DevExpress.XtraGrid.Columns.AutoFilterCondition.Contains;
             this.colMucDichSuDung.Visible = true;
-            this.colMucDichSuDung.VisibleIndex = 10;
+            this.colMucDichSuDung.VisibleIndex = 11;
             this.colMucDichSuDung.Width = 105;
             // 
             // colBenhLy
@@ -469,7 +479,7 @@
             this.colBenhLy.OptionsColumn.AllowEdit = false;
             this.colBenhLy.OptionsFilter.AutoFilterCondition = DevExpress.XtraGrid.Columns.AutoFilterCondition.Contains;
             this.colBenhLy.Visible = true;
-            this.colBenhLy.VisibleIndex = 13;
+            this.colBenhLy.VisibleIndex = 14;
             this.colBenhLy.Width = 102;
             // 
             // colKenhTT
@@ -479,7 +489,7 @@
             this.colKenhTT.OptionsColumn.AllowEdit = false;
             this.colKenhTT.OptionsFilter.AutoFilterCondition = DevExpress.XtraGrid.Columns.AutoFilterCondition.Contains;
             this.colKenhTT.Visible = true;
-            this.colKenhTT.VisibleIndex = 11;
+            this.colKenhTT.VisibleIndex = 12;
             this.colKenhTT.Width = 99;
             // 
             // colGhiChu
@@ -489,7 +499,7 @@
             this.colGhiChu.OptionsColumn.AllowEdit = false;
             this.colGhiChu.OptionsFilter.AutoFilterCondition = DevExpress.XtraGrid.Columns.AutoFilterCondition.Contains;
             this.colGhiChu.Visible = true;
-            this.colGhiChu.VisibleIndex = 18;
+            this.colGhiChu.VisibleIndex = 19;
             this.colGhiChu.Width = 90;
             // 
             // colLinkFB
@@ -499,7 +509,7 @@
             this.colLinkFB.OptionsColumn.AllowEdit = false;
             this.colLinkFB.OptionsFilter.AutoFilterCondition = DevExpress.XtraGrid.Columns.AutoFilterCondition.Contains;
             this.colLinkFB.Visible = true;
-            this.colLinkFB.VisibleIndex = 14;
+            this.colLinkFB.VisibleIndex = 15;
             this.colLinkFB.Width = 99;
             // 
             // rsearchNhanVien
@@ -598,6 +608,15 @@
             // 
             this.tinhThanhTableAdapter.ClearBeforeFill = true;
             // 
+            // btnTransfer
+            // 
+            this.btnTransfer.Caption = "Chuyển";
+            this.btnTransfer.Id = 9;
+            this.btnTransfer.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem1.ImageOptions.Image")));
+            this.btnTransfer.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem1.ImageOptions.LargeImage")));
+            this.btnTransfer.Name = "btnTransfer";
+            this.btnTransfer.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnTransfer_ItemClick);
+            // 
             // FrmKhachHang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -679,5 +698,6 @@
         private DevExpress.XtraGrid.Columns.GridColumn colKenhTT;
         private DevExpress.XtraGrid.Columns.GridColumn colGhiChu;
         private DevExpress.XtraGrid.Columns.GridColumn colLinkFB;
+        private DevExpress.XtraBars.BarButtonItem btnTransfer;
     }
 }

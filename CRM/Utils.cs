@@ -80,7 +80,12 @@ namespace CRM
                     t.NgayHen = ngayhen;
 
                     if (!k.IsNVBHNull())
+                    {
                         t.NhanVien = k.NVBH;
+                        t.NVCS = k.NVBH;
+                    }
+                    
+
                     t.Loai = "CMSN";
                     t.NgayCapNhat = DateTime.Now;
                     t.NoiDung = string.Format("Nhắn tin/Gọi điện thoại chúc mừng sinh nhật khách hàng {0} vào ngày {1:dd/MM}", k.TenKH, k.NgaySinh);
@@ -98,7 +103,7 @@ namespace CRM
                 }
 
                 ngayhen = new DateTime(DateTime.Today.Year, d.Month, d.Day, 9, 0, 0);
-                var tv1 = dtTuVan.Where(x => x.KhachHang == k.MaKH && x.Loai == "LLCMSN" && x.NgayHen.Date == ngayhen.Date).FirstOrDefault();
+                var tv1 = dtTuVan.Where(x => x.KhachHang == k.MaKH && x.Loai == "LLCMSN" && x.NgayHen.Year == ngayhen.Year).FirstOrDefault();
                 if (tv1 == null)
                 {
                     var t = dtTuVan.NewTuVanRow();
@@ -108,7 +113,10 @@ namespace CRM
                     t.NgayHen = ngayhen;
 
                     if (!k.IsNVBHNull())
+                    {
                         t.NhanVien = k.NVBH;
+                        t.NVCS = k.NVBH;
+                    }
                     t.Loai = "LLCMSN";
                     t.NgayCapNhat = DateTime.Now;
                     t.NoiDung = string.Format("Liên hệ chúc mừng sinh nhật khách hàng {0} vào ngày {1:dd/MM}", k.TenKH, k.NgaySinh);

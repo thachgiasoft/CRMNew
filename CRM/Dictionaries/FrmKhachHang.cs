@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using DevExpress.XtraGrid;
+using Lotus.Libraries;
 namespace CRM.Dictionaries
 {
     public partial class FrmKhachHang : FrmBase
@@ -23,7 +24,8 @@ namespace CRM.Dictionaries
 
         private void FrmPhapLy_Load(object sender, EventArgs e)
         {            
-            OnReload(); 
+            OnReload();
+            btnTransfer.Enabled = HeThong.NguoiDungDangNhap.Loai >= (int)ChucDanh.QuanLy;
         }
         protected override void OnEdit()
         {
@@ -93,6 +95,30 @@ namespace CRM.Dictionaries
         private void customGridView1_DoubleClick(object sender, EventArgs e)
         {
             OnEdit();
+        }
+
+        private void btnTransfer_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            customGridView1.CloseEditor();
+            var iKH = customGridView1.GetSelectedRows();
+            if (iKH.Length == 0) return;
+            FrmChonNV f = new FrmChonNV("");
+            if(f.ShowDialog()==DialogResult.OK)
+            {
+                if(MsgBox.ShowYesNoDialog(string.Format("Bạn muốn chuyển những khách hàng này sang cho [{0}]?",f.NVChon))==DialogResult.Yes)
+                {
+                    foreach (int i in iKH)
+                    {
+                        var kh = customGridView1.GetDataRow(i) as CRMData.KhachHangRow;
+                        kh.NVBH = f.NVChon;
+                    }
+                    if (OnSave())
+                    {
+                        OnReload();
+                        ShowAlert("Đã chuyển thành công");
+                    }
+                }
+            }
         }
 
        

@@ -506,6 +506,7 @@ namespace CRM.Dictionaries
             t.NgayTao = NgayPhieuDateEdit.DateTime;
             t.KhachHang = KhachHangSearchLookUpEdit.EditValue.ToString();
             t.NhanVien = NVBanHangSearchLookUpEdit.EditValue.ToString();
+            t.NVCS = NVBanHangSearchLookUpEdit.EditValue.ToString();
             // mac dinh 5 ngay
             t.NgayHen = dateNgayHen.DateTime;
             t.NoiDung = string.Format("Kiểm tra xác nhận đơn hàng [{0}]",t.SoPhieuDat);
