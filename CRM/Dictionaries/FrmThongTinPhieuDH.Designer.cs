@@ -1612,6 +1612,7 @@
             this.customGridView1.NotNullColumns = null;
             this.customGridView1.OptionsBehavior.AutoExpandAllGroups = true;
             this.customGridView1.OptionsFind.FindMode = DevExpress.XtraEditors.FindMode.Always;
+            this.customGridView1.OptionsView.ShowFooter = true;
             this.customGridView1.ShowIndexIndicator = false;
             this.customGridView1.UseAutoCode = false;
             this.customGridView1.UseAutoLog = false;
@@ -1734,6 +1735,8 @@
             this.colSoLuong.FieldName = "SoLuong";
             this.colSoLuong.Name = "colSoLuong";
             this.colSoLuong.OptionsFilter.AutoFilterCondition = DevExpress.XtraGrid.Columns.AutoFilterCondition.Contains;
+            this.colSoLuong.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
+            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "SoLuong", "{0:#,#0.###}")});
             this.colSoLuong.Visible = true;
             this.colSoLuong.VisibleIndex = 4;
             this.colSoLuong.Width = 95;
@@ -1768,7 +1771,7 @@
             this.colTienCK.Name = "colTienCK";
             this.colTienCK.OptionsFilter.AutoFilterCondition = DevExpress.XtraGrid.Columns.AutoFilterCondition.Contains;
             this.colTienCK.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
-            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "TienCK", "SUM={0:#,#0.##}")});
+            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "TienCK", "{0:#,#0.##}")});
             this.colTienCK.Visible = true;
             this.colTienCK.VisibleIndex = 6;
             this.colTienCK.Width = 100;
@@ -1783,7 +1786,7 @@
             this.colThanhTien.Name = "colThanhTien";
             this.colThanhTien.OptionsFilter.AutoFilterCondition = DevExpress.XtraGrid.Columns.AutoFilterCondition.Contains;
             this.colThanhTien.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
-            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "ThanhTien", "SUM={0:#,#0}")});
+            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "ThanhTien", "{0:#,#0}")});
             this.colThanhTien.Visible = true;
             this.colThanhTien.VisibleIndex = 7;
             this.colThanhTien.Width = 129;
