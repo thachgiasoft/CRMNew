@@ -180,6 +180,12 @@ namespace CRM
             OpenForm<FrmSoKHDuocCS>(HeThong.ChucNangDangChon);
         }
 
+        private void btnExportTuvan_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            HeThong.ChucNangDangChon = e.Item.Tag == null ? string.Empty : e.Item.Tag.ToString();
+            OpenForm<FrmKetXuatTuVan>(HeThong.ChucNangDangChon);
+        }
+
        
     }
 }

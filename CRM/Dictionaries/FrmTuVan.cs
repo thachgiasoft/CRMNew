@@ -54,6 +54,9 @@ namespace CRM.Dictionaries
 
         private void FrmPhapLy_Load(object sender, EventArgs e)
         {
+
+            // TODO: This line of code loads data into the 'data.NhomKH' table. You can move, or remove it, as needed.
+            this.nhomKHTableAdapter.Fill(this.data.NhomKH);
             // TODO: This line of code loads data into the 'data.LoaiTuVan' table. You can move, or remove it, as needed.
             this.loaiTuVanTableAdapter.Fill(this.data.LoaiTuVan);
             UseEnableControl = false;
@@ -196,8 +199,7 @@ namespace CRM.Dictionaries
         protected override void OnReload()
         {
             base.OnReload();
-
-           
+            
             this.khachHangTableAdapter.FillByUser(this.data.KhachHang, HeThong.NguoiDungDangNhap.TenDangNhap);
 
             if (ReportType == Lotus.Base.ReportType.All)

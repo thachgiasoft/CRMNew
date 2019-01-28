@@ -164,6 +164,12 @@
     <Compile Include="Dictionaries\FrmThongTinCty.Designer.cs">
       <DependentUpon>FrmThongTinCty.cs</DependentUpon>
     </Compile>
+    <Compile Include="Dictionaries\FrmKetXuatTuVan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dictionaries\FrmKetXuatTuVan.designer.cs">
+      <DependentUpon>FrmKetXuatTuVan.cs</DependentUpon>
+    </Compile>
     <Compile Include="Reports\CRMBaseReport.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -352,6 +358,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Dictionaries\FrmThongTinCty.resx">
       <DependentUpon>FrmThongTinCty.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dictionaries\FrmKetXuatTuVan.resx">
+      <DependentUpon>FrmKetXuatTuVan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\CRMBaseReport.resx">
       <DependentUpon>CRMBaseReport.cs</DependentUpon>
